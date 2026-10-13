@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<!--
+© 2026 Đặng Thanh Bình. Bản quyền thuộc về tác giả đối với phần biên soạn tiếng Việt, ví dụ minh họa, thiết kế và phần mềm khóa học.
+Nội dung gốc "Bài giảng: Kiến thức kiểm dịch thực vật và sinh vật gây hại trong kho nông sản" © tác giả tài liệu gốc; các nguồn được tài liệu dẫn (tiêu chuẩn IPPC, tài liệu FAO, văn bản pháp luật Việt Nam) thuộc về tổ chức ban hành tương ứng.
+Khóa học là bản diễn giải cho đào tạo, không phải bản dịch chính thức, không phải chương trình chứng nhận.
+-->
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Đặng Thanh Bình">
+<title>PHYTOGUARD ACADEMY · Kiểm dịch thực vật và sâu mọt hại kho</title>
+<style>
+:root{--bg:#f2f4fb;--card:#fff;--ink:#131c3a;--text:#2b3352;--muted:#66708f;--line:#dfe3f1;--pri:#1557d6;--acc:#f59e0b;--ok:#12824a;--bad:#c62838;--c1:#1557d6;--c2:#19b5e8;--sh:0 6px 22px rgba(19,28,58,.08)}
+body.dark{--bg:#0b1124;--card:#141d3a;--ink:#eef1ff;--text:#cdd4ee;--muted:#93a0c6;--line:#27325a;--sh:0 6px 22px rgba(0,0,0,.4);--ok:#4fd08a;--bad:#ff7d8a}
+.m1{--c1:#1557d6;--c2:#19b5e8}.m2{--c1:#6d3be0;--c2:#c14fe6}.m3{--c1:#d42f4b;--c2:#ff7a3d}.m4{--c1:#c45a00;--c2:#f5a81c}
+.m5{--c1:#078a77;--c2:#25c7a0}.m6{--c1:#1c8a3a;--c2:#86c92a}.m7{--c1:#bf2585;--c2:#f2609c}.m8{--c1:#3a48d0;--c2:#2aa9ea}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;font-size:16px}
+h1,h2,h3,h4{color:var(--ink);margin:0 0 .4em;line-height:1.2}
+a{color:var(--pri)}body.dark a{color:#8db4ff}
+button,select,input{font:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--acc);color:#111;padding:8px 14px;border-radius:10px;z-index:99;font-weight:700}
+.skip:focus{left:8px}
+#app{display:flex;min-height:100%}
+/* sidebar */
+.side{width:286px;flex:0 0 286px;background:linear-gradient(170deg,#0f1838,#1c1552);color:#dfe5ff;padding:20px 16px;display:flex;flex-direction:column;gap:14px;position:sticky;top:0;height:100vh;overflow:auto}
+.brand{font-weight:800;letter-spacing:.08em;font-size:17px;color:#fff;display:flex;align-items:center;gap:10px;background:none;border:0;text-align:left;padding:0}
+.brand i{width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,#f59e0b,#f2609c);display:grid;place-items:center;font-style:normal;color:#111;font-size:18px}
+.side small{color:#9aa6d6}
+.side nav{display:flex;flex-direction:column;gap:4px}
+.nv{display:flex;align-items:center;gap:10px;background:none;border:0;color:#dfe5ff;padding:8px 10px;border-radius:12px;text-align:left;width:100%;font-size:14.5px}
+.nv:hover,.nv.on{background:rgba(255,255,255,.1)}
+.nv b{flex:0 0 28px;height:28px;border-radius:9px;display:grid;place-items:center;background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;font-size:13px}
+.nv.done b{background:#12824a}
+.sep{height:1px;background:rgba(255,255,255,.14);margin:4px 0}
+.bar{height:8px;border-radius:9px;background:rgba(255,255,255,.16);overflow:hidden}
+.bar>i{display:block;height:100%;background:linear-gradient(90deg,#f59e0b,#f2609c);border-radius:9px;transition:width .4s}
+.side footer{margin-top:auto;font-size:12.5px;color:#9aa6d6}
+/* top */
+.col{flex:1;min-width:0;display:flex;flex-direction:column}
+.top{position:sticky;top:0;z-index:20;background:var(--card);box-shadow:var(--sh);display:flex;align-items:center;gap:10px;padding:10px 18px;flex-wrap:wrap}
+.top .ttl{font-weight:700;color:var(--ink);flex:1;min-width:140px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.top input[type=search]{border:1px solid var(--line);border-radius:12px;padding:8px 12px;background:var(--bg);color:var(--ink);width:210px;max-width:40vw}
+.top select,.btn{border:1px solid var(--line);border-radius:12px;padding:8px 13px;background:var(--card);color:var(--ink);font-weight:600}
+.btn:hover{border-color:var(--pri)}
+.btn.pri{background:var(--pri);color:#fff;border-color:var(--pri)}
+.btn.warm{background:linear-gradient(135deg,#f59e0b,#ff7a3d);color:#1a1205;border:0;font-weight:800;padding:12px 20px;font-size:17px;box-shadow:0 8px 20px rgba(245,158,11,.35)}
+.btn.ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.4);padding:12px 20px;font-size:17px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.ico{width:40px;padding:8px 0;text-align:center}
+#menuBtn{display:none}
+.tprog{position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--line)}
+.tprog i{display:block;height:100%;background:linear-gradient(90deg,var(--pri),var(--acc));transition:width .4s}
+main{padding:22px 26px 40px;max-width:1240px;width:100%;margin:0 auto;flex:1}
+.warnline{background:#fff4d6;color:#6b4a00;border-radius:10px;padding:6px 12px;font-size:13.5px;margin-bottom:12px}
+.card{background:var(--card);border-radius:18px;box-shadow:var(--sh);padding:20px}
+.note{border-left:5px solid var(--acc);background:var(--card);border-radius:14px;padding:14px 18px;box-shadow:var(--sh)}
+.muted{color:var(--muted)}.small{font-size:13.5px}
+/* hero */
+.hero{position:relative;overflow:hidden;border-radius:20px;color:#fff;padding:38px 36px;background:linear-gradient(125deg,#0f1b4d,#3a2bb0 55%,#b0268a);display:grid;grid-template-columns:1.25fr .75fr;gap:20px;align-items:center}
+.hero h1{color:#fff;font-size:clamp(28px,4.2vw,50px);font-weight:800}
+.hero h1 span{display:block}.hero h1 span:nth-child(2){color:#ffd27a}
+.hero p{max-width:60ch;color:#e6e9ff;font-size:17px}
+.hero .acts{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
+.nums{display:flex;gap:26px;flex-wrap:wrap}
+.nums b{display:block;font-size:34px;line-height:1}.nums span{font-size:13px;color:#cfd5ff}
+.glow{position:absolute;border-radius:50%;filter:blur(60px);opacity:.5;pointer-events:none;animation:drift 16s ease-in-out infinite alternate}
+.glow.a{width:340px;height:340px;background:#19b5e8;left:-80px;top:-120px}
+.glow.b{width:380px;height:380px;background:#f59e0b;right:-120px;bottom:-180px;animation-duration:22s}
+.hero>div:not(.glow),.hero>svg{position:relative}
+.hero svg{width:100%;max-width:330px;justify-self:center}
+@keyframes drift{to{transform:translate(60px,40px) scale(1.15)}}
+.grid8{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:22px 0}
+.mcard{background:var(--card);border:0;border-top:5px solid var(--c1);border-radius:18px;box-shadow:var(--sh);padding:16px;text-align:left;color:var(--text);display:flex;flex-direction:column;gap:6px;transition:transform .2s}
+.mcard:hover{transform:translateY(-4px)}
+.mcard .n{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;display:grid;place-items:center;font-weight:800}
+.mcard h3{font-size:17px;margin:4px 0 0}
+.mcard .st{margin-top:auto;font-size:13px;color:var(--muted)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+/* slide */
+.slide{display:flex;flex-direction:column;gap:14px}
+.band{position:relative;overflow:hidden;border-radius:20px;color:#fff;padding:24px 150px 24px 28px;background:linear-gradient(100deg,var(--c1) 0%,var(--c1) 58%,var(--c2) 100%);box-shadow:var(--sh)}
+.band h1{color:#fff;font-size:clamp(24px,3vw,36px);margin:4px 0 6px}
+.band p{margin:0;font-size:17.5px;max-width:70ch;color:#fff}
+.band .kick{font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;opacity:.92}
+.band .big{position:absolute;right:14px;bottom:-34px;font-size:150px;font-weight:800;line-height:1;color:rgba(255,255,255,.2);pointer-events:none}
+.band .shine{position:absolute;top:0;bottom:0;width:120px;left:-160px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);pointer-events:none}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.kc{background:color-mix(in srgb,var(--c1) 6%,var(--card));border-top:4px solid var(--c1);border-radius:16px;padding:14px 16px;box-shadow:var(--sh);transition:transform .2s}
+.kc:hover{transform:translateY(-3px)}
+.kc .n{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;font-weight:800;font-size:13px;margin-bottom:6px}
+.kc h3{font-size:17px;margin:0 0 4px}.kc p{margin:0}
+.g2{display:flex;flex-direction:column;gap:14px}
+.gb{display:contents}
+.ex{order:1;background:color-mix(in srgb,var(--c1) 8%,var(--card));border:2px dashed color-mix(in srgb,var(--c1) 55%,transparent);border-radius:16px;padding:14px 16px 14px 54px;position:relative}
+.ex:before{content:"💡";position:absolute;left:16px;top:12px;font-size:24px}
+.inter{order:2;background:var(--card);border:2px solid color-mix(in srgb,var(--c1) 40%,transparent);border-radius:16px;padding:14px 16px;box-shadow:var(--sh)}
+.take{order:3;background:linear-gradient(120deg,#131c3a,#2b2f7a);color:#fff;border-left:6px solid var(--acc);border-radius:16px;padding:14px 18px}
+.take b{display:block;font-size:12.5px;letter-spacing:.12em;color:#ffd27a}
+.take span{font-size:18px;font-weight:600}
+.src{font-size:13.5px;color:var(--muted);margin:0}
+.trn{background:#fff7e0;color:#5b4100;border-radius:14px;padding:10px 14px;border:1px solid #f3d489}
+body.dark .trn{background:#33290c;color:#ffe3a1;border-color:#6b5514}
+details.narr{background:var(--card);border-radius:14px;padding:10px 16px;box-shadow:var(--sh)}
+details.narr summary{cursor:pointer;font-weight:700;color:var(--ink)}
+details.narr ol{color:var(--muted);font-size:14px}
+.snav{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.dots{display:flex;gap:8px}
+.dot{width:14px;height:14px;border-radius:50%;border:2px solid var(--c1);background:transparent;padding:0}
+.dot.on{background:linear-gradient(135deg,var(--c1),var(--c2));transform:scale(1.25)}
+.dot.seen{background:color-mix(in srgb,var(--c1) 35%,transparent)}
+/* interactive */
+.inter h4{font-size:14px;color:var(--c1);margin-bottom:8px}body.dark .inter h4{color:var(--c2)}
+.flow{display:flex;gap:6px;align-items:stretch;flex-wrap:wrap}
+.flow button{flex:1;min-width:120px;border:2px solid var(--c1);background:var(--card);color:var(--ink);border-radius:12px;padding:10px;font-weight:700}
+.flow button.on{background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff}
+.flow .ar{align-self:center;color:var(--c1);font-size:22px;font-weight:800}
+.out{margin-top:10px;background:color-mix(in srgb,var(--c1) 7%,var(--card));border-radius:12px;padding:10px 12px;min-height:44px}
+table.t{width:100%;border-collapse:collapse;font-size:14.5px}
+table.t th{background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;text-align:left;padding:7px 9px}
+table.t td{border-bottom:1px solid var(--line);padding:7px 9px;vertical-align:top}
+table.t tr.hl td{background:color-mix(in srgb,var(--c1) 12%,transparent)}
+table.t tbody tr{cursor:pointer}
+table.t.hide td:last-child{color:transparent;background:repeating-linear-gradient(45deg,var(--line),var(--line) 6px,transparent 6px,transparent 12px)}
+table.t.hide tr.hl td:last-child{color:inherit;background:color-mix(in srgb,var(--c1) 12%,transparent)}
+.five{display:flex;gap:8px;flex-wrap:wrap}
+.five button{flex:1;min-width:92px;border:2px solid var(--c1);background:var(--card);color:var(--ink);border-radius:14px;padding:8px 6px;font-weight:700;display:flex;flex-direction:column;align-items:center;gap:4px}
+.five button.on{background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff}
+.five svg{width:30px;height:30px}
+.frm{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.frm label{display:flex;flex-direction:column;gap:4px;font-size:13.5px;font-weight:600}
+.frm select{border:1px solid var(--line);border-radius:10px;padding:8px;background:var(--card);color:var(--ink);width:100%}
+.tag{font-size:11.5px;letter-spacing:.08em;font-weight:800;color:#8a5a00;background:#ffecc0;border-radius:8px;padding:3px 8px;display:inline-block;margin-top:8px}
+.sw{display:flex;gap:10px;flex-wrap:wrap}
+.sw label,.ck label{display:flex;gap:8px;align-items:center;border:2px solid var(--line);border-radius:12px;padding:8px 12px;cursor:pointer;font-weight:600}
+.sw label:has(input:checked),.ck label:has(input:checked){border-color:var(--c1);background:color-mix(in srgb,var(--c1) 9%,var(--card))}
+.ck{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ord{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.ord li{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:10px;padding:5px 10px;background:var(--card)}
+.ord li span{flex:1;font-weight:600}
+.ord button{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;width:32px;height:28px}
+.sc button.op{display:block;width:100%;text-align:left;margin:6px 0;border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:8px 12px}
+.sc button.op.ok{border-color:var(--ok)}.sc button.op.no{border-color:var(--bad)}
+.good{color:var(--ok);font-weight:700}.badc{color:var(--bad);font-weight:700}
+/* tts */
+.tts{background:var(--card);border-radius:16px;box-shadow:var(--sh);padding:10px 14px;margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;position:relative;overflow:hidden}
+.tts .btn{padding:6px 11px;font-size:14px}
+.tts label{font-size:13.5px;display:flex;gap:5px;align-items:center}
+.tts select{border:1px solid var(--line);border-radius:10px;padding:5px;background:var(--card);color:var(--ink)}
+.tts .stt{font-size:13.5px;font-weight:600;color:var(--ink);margin-left:auto}
+.tts .stt.err{color:var(--bad)}
+.tts .disc{flex-basis:100%;font-size:12px;color:var(--muted)}
+.tts .tp{position:absolute;left:0;bottom:0;height:3px;background:linear-gradient(90deg,var(--c1),var(--c2));width:0}
+/* quiz */
+.q{background:var(--card);border-radius:16px;box-shadow:var(--sh);padding:16px;margin:14px 0;border-left:5px solid var(--c1)}
+.q h3{font-size:17px}
+.opt{display:flex;gap:10px;align-items:flex-start;width:100%;text-align:left;border:2px solid var(--line);border-radius:12px;padding:9px 12px;margin:6px 0;background:var(--card);color:var(--text);cursor:pointer}
+.opt.sel{border-color:var(--pri)}.opt.ok{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 10%,var(--card))}.opt.no{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 9%,var(--card))}
+.fb{margin-top:8px;padding:8px 12px;border-radius:10px;background:var(--bg)}
+.score{font-size:54px;font-weight:800;color:var(--ink);line-height:1}
+.pill{display:inline-block;border-radius:99px;padding:4px 14px;font-weight:800;color:#fff}
+.pill.ok{background:#12824a}.pill.no{background:#c62838}
+table.r{width:100%;border-collapse:collapse}table.r th,table.r td{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;font-size:14.5px}
+.cert{border:3px double var(--pri);border-radius:18px;padding:28px;text-align:center;background:var(--card);margin:18px 0}
+.cert h2{letter-spacing:.14em;color:var(--pri)}
+.cert input{border:0;border-bottom:2px dashed var(--line);text-align:center;font-size:24px;font-weight:700;width:min(480px,100%);background:transparent;color:var(--ink);padding:4px}
+.cert .row{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin:14px 0}
+.cert .row b{display:block;font-size:20px;color:var(--ink)}
+.sec{margin:18px 0}
+.acts2{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+dl.gl dt{font-weight:700;color:var(--ink);margin-top:8px}dl.gl dd{margin:0}
+.res a{display:block;padding:10px 14px;border-radius:12px;background:var(--card);box-shadow:var(--sh);margin:8px 0;text-decoration:none;color:var(--text)}
+.backdrop{display:none}
+/* animations */
+@keyframes inR{from{opacity:0;transform:translateX(60px)}to{opacity:1;transform:none}}
+@keyframes inL{from{opacity:0;transform:translateX(-60px)}to{opacity:1;transform:none}}
+@keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes sweep{to{left:120%}}
+main.anim.fwd>.slide{animation:inR .5s ease both}
+main.anim.back>.slide{animation:inL .5s ease both}
+main.anim .band .shine{animation:sweep 1.1s .35s ease both}
+main.anim .band h1,main.anim .band p{animation:up .45s .15s both}
+main.anim .kc{animation:up .45s both}
+main.anim .kc:nth-child(1){animation-delay:.25s}main.anim .kc:nth-child(2){animation-delay:.35s}main.anim .kc:nth-child(3){animation-delay:.45s}
+main.anim .ex{animation:up .45s .55s both}main.anim .inter{animation:up .45s .65s both}main.anim .take{animation:up .45s .75s both}
+main.anim .mcard,main.anim>h1,main.anim>.card,main.anim>.note,main.anim>.hero,main.anim .q{animation:up .45s both}
+main.anim .mcard:nth-child(2){animation-delay:.06s}main.anim .mcard:nth-child(3){animation-delay:.12s}main.anim .mcard:nth-child(4){animation-delay:.18s}
+main.anim .mcard:nth-child(5){animation-delay:.24s}main.anim .mcard:nth-child(6){animation-delay:.3s}main.anim .mcard:nth-child(7){animation-delay:.36s}main.anim .mcard:nth-child(8){animation-delay:.42s}
+/* present */
+body.present .side,body.present details.narr,body.present .src,body.present .warnline{display:none}
+body.present #app{display:block}
+body.present main{max-width:none;padding:14px 26px;height:100vh;overflow:auto}
+body.present .top{position:fixed;left:0;right:0;top:0;transform:translateY(-110%);transition:transform .3s}
+body.present .tts{position:fixed;left:12px;right:12px;bottom:10px;margin:0;z-index:20;transform:translateY(140%);transition:transform .3s}
+body.present.bars .top,body.present.bars .tts{transform:none}
+body.present .slide{transform-origin:top left}
+@media (min-width:1100px){
+ body.present .g2{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+ body.present .gb{display:flex;flex-direction:column;gap:14px;order:1}
+ body.present .inter{order:0}
+ body.present .gb .ex,body.present .gb .take{flex:1}
+ body.present .g2.noint .ex,body.present .g2.noint .take{display:flex;flex-direction:column;justify-content:center}
+ body.present .g2.noint .gb{display:contents}
+}
+@media (max-width:899px){
+ .side{position:fixed;left:0;top:0;z-index:40;transform:translateX(-105%);transition:transform .3s}
+ body.menu .side{transform:none}
+ body.menu .backdrop{display:block;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:30}
+ #menuBtn{display:inline-block}
+ .cards,.two,.hero,.frm,.ck{grid-template-columns:1fr}
+ .hero{padding:26px 20px}.hero svg{max-width:210px}
+ main{padding:16px 14px 40px}
+ .band{padding:20px 20px 24px}.band .big{font-size:96px;bottom:-20px;opacity:.7}
+ .top .ttl{flex-basis:50%}
+ .flow .ar{display:none}
+}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+@media print{
+ *,*:before,*:after{animation:none!important;transition:none!important}
+ body{background:#fff}
+ .side,.top,.tts,.skip,.backdrop{display:none!important}
+ body *{visibility:hidden}
+ body:not([data-print=chk]) .cert,body:not([data-print=chk]) .cert *{visibility:visible}
+ body:not([data-print=chk]) main>*:not(.cert){display:none}
+ body[data-print=chk] .prt,body[data-print=chk] .prt *{visibility:visible}
+ body[data-print=chk] main>*:not(:has(.prt)),body[data-print=chk] .slide>*:not(.g2),body[data-print=chk] .g2 .gb{display:none}
+ .cert,.prt{position:absolute;left:0;top:0;width:100%;box-shadow:none}
+ .cert input::placeholder{color:transparent}
+ main{padding:0;max-width:none}
+ .noprint{display:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Bỏ qua điều hướng</a>
+<div id="app">
+ <aside class="side" id="side" aria-label="Mục lục khóa học"></aside>
+ <div class="backdrop" data-a="menu"></div>
+ <div class="col">
+  <header class="top" id="top">
+   <button class="btn ico" id="menuBtn" data-a="menu" aria-label="Mở mục lục">☰</button>
+   <div class="ttl" id="ttl"></div>
+   <input type="search" id="search" placeholder="Tìm (không cần dấu)…" aria-label="Tìm trong khóa học">
+   <select id="mode" aria-label="Chế độ"><option value="learner">Học viên</option><option value="trainer">Giảng viên</option></select>
+   <button class="btn" data-a="present" id="presBtn">Trình chiếu</button>
+   <button class="btn ico" data-a="dark" aria-label="Đổi giao diện sáng hoặc tối">◐</button>
+   <div class="tprog" aria-hidden="true"><i id="tprog" style="width:0"></i></div>
+  </header>
+  <main id="main" tabindex="-1"></main>
+ </div>
+</div>
+<script id="course-data" type="application/json">{"id":"kdtv-sau-mot-kho-v1","version":"1.0","title":"Kiểm dịch thực vật và sâu mọt hại kho nông sản","subtitle":"Pháp luật kiểm dịch • Sâu mọt hại kho • Quản lý kho nông sản","docName":"Bài giảng: Kiến thức kiểm dịch thực vật và sinh vật gây hại trong kho nông sản (bản phát triển nội dung, tập trung vào kiến thức)","docShort":"Bài giảng KDTV","docOwner":"tác giả tài liệu gốc; các nguồn được tài liệu dẫn (tiêu chuẩn IPPC, tài liệu FAO, văn bản pháp luật Việt Nam) thuộc về tổ chức ban hành tương ứng","source":"Bài giảng: Kiến thức kiểm dịch thực vật và sinh vật gây hại trong kho nông sản · 10/2026 · 10 trang","audience":"QA / QC · Kỹ thuật · Sản xuất · Vệ sinh","duration":"60–80 phút","passPercent":85,"examPerModule":2,"modules":[{"id":1,"title":"Bản chất của kiểm dịch thực vật","description":"Kiểm dịch bảo vệ điều gì, khác gì với kiểm soát côn trùng kho và kiểm soát chất lượng.","duration":"6–8 phút","objective":"Phân biệt ba phạm vi quản lý và hai khái niệm vật thể – đối tượng kiểm dịch."},{"id":2,"title":"Hiểu pháp luật theo chức năng","description":"Tra cứu văn bản theo câu hỏi nghiệp vụ thay vì học thuộc số hiệu.","duration":"6–8 phút","objective":"Biết câu hỏi nào dẫn tới nhóm căn cứ nào và giới hạn của việc chỉ biết ngày hiệu lực."},{"id":3,"title":"Cơ sở sinh học của sâu mọt","description":"Vì sao mọt xuất hiện sau khi nhập kho; nhóm sơ cấp, thứ cấp; bốn yếu tố phát triển.","duration":"7–9 phút","objective":"Giải thích được cơ chế phát sinh và hai điều hay giảng sai về hàng khô, hàng mát."},{"id":4,"title":"Nhận diện: mọt vòi và mọt đục hạt","description":"Mọt gạo, mọt ngô, mọt đục hạt nhỏ và ranh giới giữa sàng lọc với giám định.","duration":"7–9 phút","objective":"Nêu đặc điểm sàng lọc của ba loài gây hại sơ cấp và giới hạn của nhận diện tại kho."},{"id":5,"title":"Nhận diện: nhóm thứ cấp và mọt cà phê","description":"Mọt bột đỏ, mọt răng cưa, mọt cà phê và bảng hệ thống hóa sáu loài.","duration":"7–9 phút","objective":"Liên hệ đặc tính thức ăn của từng loài với nơi cần quan sát trong kho."},{"id":6,"title":"Hiểu đúng dấu hiệu và mức độ","description":"Dấu hiệu, ba cấp độ kết luận và lý do không có một ngưỡng xử lý chung.","duration":"7–9 phút","objective":"Báo cáo đúng mức độ chắc chắn và không suy diễn quy tắc xử lý chung."},{"id":7,"title":"Nguyên lý lấy mẫu","description":"Lấy mẫu là kiểm tra một phần; mẫu đại diện; ý nghĩa của kết quả không phát hiện.","duration":"7–9 phút","objective":"Hiểu giới hạn của kết quả kiểm tra và thông tin bắt buộc đi kèm mẫu."},{"id":8,"title":"Nguyên lý phòng ngừa và kiểm soát","description":"Tác động vào điều kiện tồn tại; bẫy và mẫu hàng; xử lý không thay phòng ngừa.","duration":"7–9 phút","objective":"Giải thích vì sao kiểm soát phải kết hợp nhiều biện pháp và tránh ba nhầm lẫn chính."}],"slides":[{"id":1,"module":1,"title":"Khóa học này nói gì, và không nói gì?","lead":"Ba trục kiến thức: pháp luật kiểm dịch thực vật, sâu mọt hại kho và quản lý kho nông sản.","cards":[{"title":"Trong phạm vi","text":"Khái niệm kiểm dịch, cơ sở sinh học của sâu mọt, nhận diện sơ bộ sáu loài, cách hiểu dấu hiệu, nguyên lý lấy mẫu và kiểm soát."},{"title":"Ngoài phạm vi","text":"Checklist nghiệp vụ, phân công trách nhiệm, kế hoạch hành động và liều lượng, thời gian hun trùng không nằm trong phần kiến thức này."},{"title":"Chỉ là bản diễn giải","text":"Đây là bản diễn giải tiếng Việt cho đào tạo, không phải bản dịch chính thức hay chứng nhận của tổ chức ban hành."}],"example":"(Minh họa) Một nhân viên kho thuộc lòng các bước thao tác nhưng không hiểu lý do. Gặp vài con mọt trong lô ngô, anh ghi ngay “vi phạm kiểm dịch”; lô hàng bị giữ lại nhiều ngày dù chưa ai xác định loài.","takeaway":"Khóa học giải thích “là gì, vì sao”; nó không thay quy trình nghiệp vụ hay kết luận của cơ quan có thẩm quyền.","source":"Phần mở đầu, tr. 1; §9, tr. 9","visual":"","narration":"Bạn đã bao giờ thấy một con mọt trong bao ngô và tự hỏi chuyện này nghiêm trọng đến đâu chưa? Chào mừng bạn đến với khóa học về kiểm dịch thực vật và sâu mọt hại kho. Khóa học đi theo ba trục: pháp luật kiểm dịch, sinh học sâu mọt và quản lý kho nông sản. Chúng ta tập trung vào câu hỏi là gì và vì sao. Các bảng kiểm nghiệp vụ, phân công trách nhiệm và liều lượng xử lý nằm ngoài phạm vi. Xin lưu ý, đây là bản diễn giải tiếng Việt cho đào tạo. Nó không phải bản dịch chính thức, cũng không phải chứng nhận của tổ chức ban hành. Khi cần áp dụng, bạn hãy đối chiếu tài liệu gốc và quy định hiện hành.","trainer":"Hãy hỏi học viên: có quyết định nào ở kho bạn từng làm theo thói quen mà không rõ lý do?"},{"id":2,"module":1,"title":"Kiểm dịch thực vật bảo vệ điều gì?","lead":"Mục tiêu không dừng ở việc lô hàng không có côn trùng nhìn thấy bằng mắt thường.","cards":[{"title":"Ngăn xâm nhập, lan truyền","text":"Kiểm dịch nhằm ngăn sinh vật gây hại thuộc diện quản lý đi theo cây trồng, sản phẩm thực vật và vật thể có thể mang chúng."},{"title":"Hai nhóm dịch hại","text":"Hệ thống theo IPPC ngăn dịch hại kiểm dịch xâm nhập và hạn chế dịch hại thuộc diện điều chỉnh nhưng không phải dịch hại kiểm dịch."},{"title":"Không chỉ mức gây hại","text":"Tình trạng kiểm dịch còn liên quan đến sự hiện diện, phân bố và tình trạng kiểm soát chính thức tại khu vực cần bảo vệ."}],"example":"(Minh họa) Tổ kho soi kỹ mặt bao, không thấy con côn trùng nào nên ghi “đạt kiểm dịch”. Họ quên rằng câu hỏi kiểm dịch là sinh vật thuộc diện quản lý có theo hàng lan sang vùng mới hay không.","takeaway":"Một loài gây tổn thất nặng cho hàng chưa chắc là dịch hại kiểm dịch; mức gây hại không phải tiêu chí duy nhất.","source":"§1.1, tr. 1","visual":"","narration":"Hãy hình dung một cánh cổng ở biên giới. Người gác cổng không đếm xem hàng có bao nhiêu con côn trùng. Họ hỏi một câu khác: có sinh vật nào thuộc diện quản lý đang đi nhờ vào vùng cần bảo vệ không? Đó chính là tinh thần của kiểm dịch thực vật. Mục tiêu là ngăn sinh vật gây hại xâm nhập và lan truyền qua cây trồng, sản phẩm thực vật và các vật thể mang theo chúng. Theo tài liệu, một sinh vật có thể làm hỏng hàng rất nhiều. Nhưng mức gây hại không phải tiêu chí duy nhất. Việc quản lý còn xét sinh vật ấy đã hiện diện, phân bố ra sao và đang được kiểm soát chính thức thế nào.","trainer":"Vì sao một loài mọt rất phổ biến trong kho lại có thể không thuộc diện kiểm dịch?"},{"id":3,"module":1,"title":"Ba phạm vi quản lý: giống mà khác","lead":"Kiểm dịch, kiểm soát côn trùng kho và kiểm soát chất lượng trả lời ba câu hỏi khác nhau.","cards":[{"title":"Kiểm dịch thực vật","text":"Lô hàng có đáp ứng yêu cầu kiểm dịch áp dụng không? Quan tâm sinh vật thuộc diện quản lý và đường lan truyền."},{"title":"Kiểm soát côn trùng kho","text":"Côn trùng có phát sinh, tồn tại hay tăng số lượng trong kho không? Quan tâm nguồn nhiễm, nơi trú ẩn, tổn thất."},{"title":"Kiểm soát chất lượng","text":"Hàng có đạt chỉ tiêu kỹ thuật và yêu cầu thương mại không? Quan tâm độ ẩm, tạp chất, tình trạng hạt, mùi."}],"example":"(Bài giảng KDTV, §1.2) Một lô hàng đạt chỉ tiêu độ ẩm vẫn có thể chứa côn trùng sống. Ngược lại, thấy một loài mọt phổ biến chưa đủ để nói đã phát hiện đối tượng kiểm dịch; phiếu chất lượng đẹp không trả lời hai câu hỏi kia.","takeaway":"Ba phạm vi có liên quan nhưng không thay thế nhau: đạt một phạm vi không có nghĩa đạt hai phạm vi còn lại.","source":"§1.2, tr. 1","visual":"Bảng tóm tắt","interactive":{"type":"table","caption":"Tóm tắt bảng ở §1.2, tr. 1 — ba phạm vi quản lý","head":["Phạm vi","Câu hỏi trung tâm","Quan tâm đến"],"rows":[["Kiểm dịch thực vật","Lô hàng có đáp ứng yêu cầu kiểm dịch áp dụng không?","Sinh vật thuộc diện quản lý, đường lan truyền, yêu cầu của cơ quan có thẩm quyền"],["Kiểm soát côn trùng kho","Côn trùng có phát sinh, tồn tại hoặc tăng số lượng trong kho không?","Nguồn nhiễm, nơi trú ẩn, điều kiện phát triển, tổn thất hàng hóa"],["Kiểm soát chất lượng","Hàng có đáp ứng chỉ tiêu kỹ thuật và yêu cầu thương mại không?","Độ ẩm, tạp chất, tình trạng hạt, mùi và chỉ tiêu quy định cho sản phẩm"]]},"narration":"Một phiếu kiểm tra ghi độ ẩm đạt. Vậy lô hàng ấy đã sạch côn trùng chưa? Chưa chắc. Tài liệu tách ba phạm vi quản lý. Kiểm dịch thực vật hỏi lô hàng có đáp ứng yêu cầu kiểm dịch hay không. Kiểm soát côn trùng kho hỏi côn trùng có phát sinh và tăng lên trong kho hay không. Kiểm soát chất lượng hỏi hàng có đạt chỉ tiêu kỹ thuật và thương mại hay không. Ba câu hỏi này có liên quan, nhưng không thay thế nhau. Hàng đạt độ ẩm vẫn có thể có côn trùng sống. Thấy một loài mọt phổ biến cũng chưa phải là thấy đối tượng kiểm dịch. Mời bạn bấm vào bảng để che cột cuối và tự nhớ lại.","trainer":"Ở cơ sở của bạn, ba phạm vi này do bộ phận nào phụ trách và họ trao đổi thông tin ra sao?"},{"id":4,"module":1,"title":"Lô ngô và con mọt: hai câu hỏi riêng","lead":"“Vật thể thuộc diện kiểm dịch” và “đối tượng kiểm dịch” không phải là một.","cards":[{"title":"Vật thể thuộc diện","text":"Trả lời câu hỏi: hàng hóa hoặc vật thể nào phải chịu sự quản lý kiểm dịch?"},{"title":"Đối tượng kiểm dịch","text":"Trả lời câu hỏi: sinh vật gây hại nào thuộc diện quản lý theo quy định?"},{"title":"Không chỉ là hạt","text":"Theo cách tiếp cận của IPPC, bao bì, phương tiện vận chuyển, container và nơi lưu trữ cũng có thể mang hoặc phát tán sinh vật gây hại."}],"example":"(Bài giảng KDTV, §1.3) Lô ngô là hàng hóa được kiểm tra; con mọt tìm thấy trong lô là sinh vật cần nhận diện. Nếu hồ sơ chỉ ghi tên hàng mà bỏ trống tên loài, kết luận về lô hàng sẽ thiếu hẳn một nửa căn cứ.","takeaway":"Xác định tên hàng không thay cho xác định loài mọt, và ngược lại.","source":"§1.3, tr. 2","visual":"","narration":"Thử nghĩ về một chiếc xe khách và một hành khách trốn vé. Chiếc xe là thứ được kiểm tra. Hành khách kia mới là người cần nhận mặt. Trong kiểm dịch cũng vậy. Vật thể thuộc diện kiểm dịch là hàng hóa phải chịu sự quản lý. Đối tượng kiểm dịch là sinh vật gây hại thuộc diện quản lý. Tài liệu lấy ví dụ lô ngô và con mọt. Lô ngô là hàng được kiểm tra, con mọt là sinh vật cần nhận diện. Không thể lấy tên hàng để suy ra tên loài. Nguy cơ cũng không chỉ nằm trong hạt. Bao bì, phương tiện vận chuyển, thùng chứa hàng và nơi lưu trữ đều có thể mang sinh vật gây hại.","trainer":"Ngoài hạt nông sản, những vật thể nào trong kho của bạn có thể mang sâu mọt đi nơi khác?"},{"id":5,"module":2,"title":"Học luật bằng câu hỏi, không bằng số hiệu","lead":"Phần pháp luật nên đi theo chuỗi câu hỏi nghiệp vụ thay vì một danh sách văn bản.","cards":[{"title":"Vai trò của văn bản","text":"Mỗi nhóm văn bản giữ một vai trò riêng trong quá trình đánh giá lô hàng; hiểu vai trò giúp tra đúng chỗ."},{"title":"Bắt đầu từ tình huống","text":"Đứng trước lô hàng, người làm việc cần biết mình đang hỏi về hàng, về sinh vật, về thủ tục hay về thẩm quyền."},{"title":"Thẩm quyền kết luận","text":"Ai có trách nhiệm và ai được quyền kết luận là câu hỏi do luật và quy định phân công trả lời."}],"example":"(Minh họa) Trưởng ca đọc vanh vách số hiệu năm văn bản. Khi lô cà phê có mọt, anh vẫn không biết phải tra danh mục nào trước, và phải gọi ba cuộc điện thoại mới biết ai được quyền kết luận.","takeaway":"Thuộc số hiệu văn bản không giúp trả lời được câu hỏi của lô hàng trước mặt.","source":"§2.1, tr. 2","visual":"","narration":"Bạn có nhớ số điện thoại của mọi người trong danh bạ không? Chắc là không. Bạn chỉ cần biết muốn gọi ai, rồi tra tên. Học pháp luật kiểm dịch cũng nên như vậy. Tài liệu khuyên không học văn bản chỉ bằng số hiệu. Thay vào đó, hãy bắt đầu từ câu hỏi nghiệp vụ. Hàng này có thuộc diện kiểm dịch không? Sinh vật vừa phát hiện có thuộc diện quản lý không? Ai có thẩm quyền kết luận? Mỗi câu hỏi dẫn tới một nhóm căn cứ cần tra cứu. Khi hiểu vai trò của từng nhóm văn bản, bạn sẽ biết mở đúng trang vào đúng lúc.","trainer":"Cho học viên kể một lần tra nhầm văn bản. Nếu bắt đầu từ câu hỏi nghiệp vụ thì kết quả khác gì?"},{"id":6,"module":2,"title":"Năm câu hỏi mở đúng ngăn tủ hồ sơ","lead":"Mỗi câu hỏi nghiệp vụ tương ứng một nhóm căn cứ cần tra cứu.","cards":[{"title":"Hàng và sinh vật","text":"Hàng thuộc diện kiểm dịch: tra danh mục vật thể. Sinh vật thuộc diện quản lý: tra danh mục đối tượng kiểm dịch kèm kết quả giám định."},{"title":"Nguy cơ nhập khẩu","text":"Hàng nhập khẩu có cần phân tích nguy cơ dịch hại hay không: tra danh mục và quy định về phân tích nguy cơ dịch hại."},{"title":"Cách làm, người làm","text":"Kiểm tra, lấy mẫu, bảo quản mẫu: tra thủ tục và quy chuẩn kỹ thuật. Trách nhiệm, thẩm quyền: tra luật và quy định phân công."}],"example":"(Minh họa) Nhận lô đậu nhập khẩu, cô nhân viên mở ngay quy chuẩn lấy mẫu. Cô lấy mẫu đúng cách, nhưng chưa ai kiểm tra mặt hàng có thuộc danh mục phải phân tích nguy cơ dịch hại hay không, nên hồ sơ bị trả lại.","takeaway":"Danh mục đối tượng kiểm dịch chỉ dùng được khi đã có kết quả giám định sinh vật; không tra bằng phỏng đoán.","source":"§2.1, tr. 2","visual":"Khám phá 5 mục","interactive":{"type":"explore5","caption":"Năm câu hỏi nghiệp vụ và nhóm căn cứ tương ứng — §2.1, tr. 2","items":[{"icon":"box","label":"Hàng","text":"Hàng này có thuộc diện kiểm dịch không? → Tra danh mục vật thể thuộc diện kiểm dịch."},{"icon":"bug","label":"Sinh vật","text":"Sinh vật phát hiện có thuộc diện quản lý không? → Tra danh mục đối tượng kiểm dịch và dựa vào kết quả giám định."},{"icon":"risk","label":"Nguy cơ","text":"Hàng nhập khẩu có cần phân tích nguy cơ dịch hại không? → Tra danh mục và quy định về phân tích nguy cơ dịch hại."},{"icon":"sample","label":"Lấy mẫu","text":"Kiểm tra, lấy mẫu và bảo quản mẫu như thế nào? → Tra quy định thủ tục và quy chuẩn kỹ thuật tương ứng."},{"icon":"person","label":"Thẩm quyền","text":"Ai có trách nhiệm, ai có thẩm quyền kết luận? → Tra luật và quy định phân công trách nhiệm, thẩm quyền."}]},"narration":"Một tủ hồ sơ có năm ngăn. Mở nhầm ngăn, bạn sẽ tìm mãi không ra tờ giấy cần thiết. Tài liệu sắp pháp luật kiểm dịch thành năm câu hỏi như năm ngăn tủ. Câu thứ nhất hỏi hàng có thuộc diện kiểm dịch không. Câu thứ hai hỏi sinh vật phát hiện có thuộc diện quản lý không. Câu thứ ba hỏi hàng nhập khẩu có cần phân tích nguy cơ dịch hại không. Câu thứ tư hỏi cách kiểm tra, lấy mẫu và bảo quản mẫu. Câu thứ năm hỏi ai có trách nhiệm và thẩm quyền kết luận. Mời bạn bấm lần lượt năm nút bên dưới để xem mỗi câu hỏi dẫn tới nhóm căn cứ nào.","trainer":"Chọn một lô hàng thực tế gần đây và cho học viên đi qua đủ năm câu hỏi theo thứ tự."},{"id":7,"module":2,"title":"Thông tư 07/2026: điều gì đã rõ?","lead":"Tài liệu cập nhật thông tin ban hành của một văn bản mà bản gốc còn để ngỏ.","cards":[{"title":"Đã ban hành","text":"Theo tài liệu, Thông tư 07/2026/TT-BNNMT được ban hành và có hiệu lực ngày 23/01/2026 (giá trị tham khảo theo tài liệu)."},{"title":"Nội dung quy định","text":"Thông tư quy định chi tiết một số điều của Luật Bảo vệ và kiểm dịch thực vật và Luật Trồng trọt."},{"title":"Có sửa đổi, bổ sung","text":"Thông tư đồng thời sửa đổi, bổ sung một số thông tư trong lĩnh vực trồng trọt và bảo vệ thực vật."}],"example":"(Minh họa) Bộ slide đào tạo cũ của nhà máy vẫn ghi “thông tư mới, cần kiểm tra thông tin ban hành”. Sau nhiều tháng không ai sửa, học viên mới tưởng văn bản chưa có hiệu lực và bỏ qua khi tra cứu.","takeaway":"Ngày ban hành và hiệu lực là thông tin cần đối chiếu nguồn công bố chính thức, không chép lại từ bài giảng cũ.","source":"§2.2, tr. 2","visual":"","narration":"Bạn có còn giữ tấm lịch năm ngoái trên tường không? Tài liệu đào tạo cũng dễ lỗi thời như thế. Bản gốc của bài giảng từng nhắc một thông tư nhưng còn ghi là cần kiểm tra thông tin ban hành. Tài liệu hiện nay đã cập nhật điểm này. Đó là Thông tư số bảy năm hai nghìn không trăm hai mươi sáu của Bộ Nông nghiệp và Môi trường. Theo tài liệu, thông tư có hiệu lực từ ngày hai mươi ba tháng một năm hai nghìn không trăm hai mươi sáu. Văn bản quy định chi tiết một số điều của hai luật về bảo vệ, kiểm dịch thực vật và trồng trọt. Nó cũng sửa đổi, bổ sung một số thông tư khác trong lĩnh vực này.","trainer":"Tài liệu đào tạo nội bộ của bạn được rà soát căn cứ pháp lý lần cuối khi nào, do ai?"},{"id":8,"module":2,"title":"Biết ngày hiệu lực đã đủ chưa?","lead":"Xác nhận một văn bản còn hiệu lực chưa phải là xác nhận từng điều khoản của nó.","cards":[{"title":"Hai việc khác nhau","text":"Xác nhận ngày hiệu lực không đồng nghĩa đã xác nhận đầy đủ mọi điều khoản sửa đổi."},{"title":"Văn bản được dẫn","text":"Tình trạng hiện hành của toàn bộ các văn bản được dẫn trong bài vẫn cần kiểm tra riêng."},{"title":"Tra đúng điều khoản","text":"Khi nêu yêu cầu bắt buộc cho một loại hàng cụ thể, phải đối chiếu điều khoản tương ứng."}],"example":"(Minh họa) Thấy tên thông tư có chữ “kiểm dịch thực vật”, một nhân viên viết vào quy trình rằng mọi lô hạt điều đều phải làm thủ tục giống nhau. Khách hàng hỏi điều khoản nào quy định, anh không chỉ ra được.","takeaway":"Không suy ra yêu cầu bắt buộc cho một mặt hàng từ tên của thông tư.","source":"§2.2, tr. 2","visual":"","narration":"Giả sử bạn biết một cuốn sách vừa được tái bản. Bạn đã biết trang một trăm viết gì chưa? Tất nhiên là chưa. Với văn bản pháp luật cũng thế. Biết thông tư đã có hiệu lực mới chỉ là bước đầu. Tài liệu nhắc rằng điều đó không có nghĩa đã xác nhận mọi điều khoản sửa đổi. Nó cũng chưa xác nhận tình trạng hiện hành của các văn bản khác được dẫn trong bài. Vì vậy, khi muốn nêu một yêu cầu bắt buộc cho một loại hàng cụ thể, hãy mở đúng điều khoản tương ứng. Đừng suy ra yêu cầu chỉ từ tên của thông tư. Đây là thói quen bảo vệ bạn khi bị hỏi căn cứ.","trainer":"Trong quy trình của cơ sở, câu nào đang ghi “theo quy định” mà chưa dẫn được điều khoản cụ thể?"},{"id":9,"module":3,"title":"Hàng nhập kho sạch, sao lại có mọt?","lead":"Ở mọt chi Sitophilus, ấu trùng lớn lên bên trong hạt nên mắt thường không thấy.","cards":[{"title":"Giai đoạn ẩn","text":"Ấu trùng phát triển bên trong hạt; quan sát bên ngoài có thể không phát hiện giai đoạn đang tồn tại."},{"title":"Không thấy, chưa chắc sạch","text":"Không thấy mọt trưởng thành lúc nhập kho chưa đủ để chứng minh hàng hoàn toàn không nhiễm."},{"title":"Phát hiện khác bắt đầu","text":"Thời điểm phát hiện mọt không nhất thiết là thời điểm bắt đầu nhiễm."}],"example":"(Minh họa) Lô gạo nhập kho được soi kỹ, không thấy con mọt nào. Vài tuần sau mọt bò đầy mặt bao. Thủ kho quy ngay cho lô hàng xếp cạnh mới về hôm qua, trong khi nguồn nhiễm có thể đã nằm sẵn trong hạt.","takeaway":"Đừng kết luận nguồn nhiễm chỉ từ vị trí hoặc ngày phát hiện đầu tiên.","source":"§3.1, tr. 3","visual":"Sơ đồ dòng","interactive":{"type":"flow","caption":"Từ lúc nhiễm đến lúc nhìn thấy — diễn giải §3.1, tr. 3","steps":[{"t":"Nhiễm ban đầu","d":"Thời điểm bắt đầu nhiễm thường không ai nhìn thấy; nó có thể xảy ra trước khi hàng về kho."},{"t":"Ấu trùng trong hạt","d":"Ở mọt chi Sitophilus, ấu trùng phát triển bên trong hạt. Quan sát bề mặt có thể không phát hiện gì."},{"t":"Trưởng thành xuất hiện","d":"Khi côn trùng hoàn thành phát triển và ra bên ngoài, dấu hiệu mới trở nên rõ rệt."},{"t":"Người quản lý phát hiện","d":"Đây là “thời điểm phát hiện”, không phải “nguồn gốc phát sinh”. Hai khái niệm cần ghi tách riêng."}]},"narration":"Bạn mua một túi gạo, nhìn rất sạch. Vài tuần sau, mọt bò ra từ đâu không rõ. Chúng từ đâu tới? Câu trả lời nằm ngay trong hạt gạo. Với nhóm mọt có vòi, ấu trùng lớn lên bên trong hạt. Nhìn từ ngoài, bạn không thấy gì cả. Chỉ khi mọt trưởng thành chui ra, dấu hiệu mới rõ. Tài liệu rút ra hai điều. Thứ nhất, không thấy mọt lúc nhập kho chưa chứng minh hàng không nhiễm. Thứ hai, ngày phát hiện mọt chưa chắc là ngày bắt đầu nhiễm. Vì vậy, đừng vội đổ lỗi cho lô hàng nằm cạnh. Mời bạn bấm từng ô trong sơ đồ để xem diễn biến.","trainer":"Khi điều tra một vụ nhiễm mọt, biên bản của bạn có tách “ngày phát hiện” với “nguồn gốc nghi ngờ” không?"},{"id":10,"module":3,"title":"Nhóm sơ cấp: tấn công cả hạt nguyên","lead":"Phân nhóm theo khả năng khai thác thức ăn, không phải theo tình trạng pháp lý.","cards":[{"title":"Khởi đầu gây hại","text":"Nhóm sơ cấp có thể bắt đầu gây hại trên hạt nguyên, chưa bị tổn thương đáng kể."},{"title":"Ba đại diện","text":"Sitophilus oryzae, Sitophilus zeamais và Rhyzopertha dominica là những đại diện quan trọng trên ngũ cốc bảo quản."},{"title":"Nhìn cả bên trong","text":"Cần quan tâm cả dấu hiệu bên ngoài lẫn khả năng có côn trùng đang phát triển bên trong hạt."}],"example":"(Minh họa) Nhân viên kiểm hàng bốc một nắm ngô, thấy hạt nào cũng tròn đều, bóng đẹp nên ký nhận. Sau một thời gian lưu kho, nhiều hạt trong chính lô ấy xuất hiện lỗ thủng và nhẹ bẫng khi bóp.","takeaway":"Hạt còn nguyên hình dạng không đồng nghĩa hạt chưa bị tấn công.","source":"§3.2, tr. 3","visual":"","narration":"Một quả táo vỏ còn bóng đẹp. Bổ ra, bên trong đã có sâu. Hạt ngũ cốc cũng có thể như vậy. Tài liệu chia sâu mọt kho thành hai nhóm theo cách chúng khai thác thức ăn. Nhóm thứ nhất gọi là gây hại sơ cấp. Chúng có khả năng khởi đầu gây hại ngay trên hạt còn nguyên. Mọt gạo, mọt ngô và mọt đục hạt nhỏ là ba đại diện quan trọng trên ngũ cốc bảo quản. Điều cần nhớ rất ngắn gọn. Hạt còn nguyên hình dạng không có nghĩa là hạt chưa bị tấn công. Xin lưu ý thêm, đây là cách phân nhóm sinh học. Nó không nói gì về tình trạng pháp lý của loài.","trainer":"Tiêu chí nhận hàng của bạn đang dựa vào hình dạng hạt đến mức nào? Điều đó bỏ sót gì?"},{"id":11,"module":3,"title":"“Thứ cấp” có phải là ít quan trọng?","lead":"Nhóm thứ cấp sống nhờ hạt vỡ, bột và phụ phẩm, và vẫn có thể gây tổn thất đáng kể.","cards":[{"title":"Thức ăn ưa thích","text":"Nhóm này thường khai thác hạt đã bị tổn thương, phần vỡ, bột và phụ phẩm."},{"title":"Hai đại diện","text":"Tribolium castaneum và Oryzaephilus surinamensis thường được xếp trong nhóm gây hại thứ cấp."},{"title":"Bụi bột là thức ăn","text":"Bụi bột và nguyên liệu rơi vãi là nguồn thức ăn giúp côn trùng tồn tại và tạo điều kiện nhiễm tiếp diễn."}],"example":"(Minh họa) Kho bột mì được quét lối đi mỗi ngày, nhưng lớp bột đọng dưới chân kệ nhiều tháng không ai đụng tới. Mỗi lô mới về lại thấy côn trùng nâu đỏ bò lên từ đúng những góc đó.","takeaway":"“Thứ cấp” mô tả cách khai thác thức ăn, không có nghĩa mức thiệt hại luôn thấp.","source":"§3.2, tr. 3; §8 câu 4, tr. 9","visual":"","narration":"Trong bếp, vụn bánh rơi dưới gầm tủ là bữa tiệc của kiến. Trong kho, bụi bột và hạt vỡ cũng là bữa tiệc như thế. Tài liệu gọi nhóm côn trùng sống nhờ nguồn này là nhóm gây hại thứ cấp. Chúng thường khai thác hạt đã tổn thương, phần vỡ, bột và phụ phẩm. Mọt bột đỏ và mọt răng cưa là hai đại diện. Vì vậy, bụi bột không chỉ là chuyện vệ sinh cho đẹp mắt. Đó là nguồn thức ăn giúp côn trùng tồn tại và nhiễm tiếp diễn. Và xin đừng hiểu thứ cấp là ít quan trọng. Từ này chỉ mô tả cách khai thác thức ăn. Nhóm này vẫn có thể gây tổn thất đáng kể.","trainer":"Chỉ ra ba vị trí trong kho của bạn mà bột hoặc hạt vỡ có thể tích tụ lâu ngày."},{"id":12,"module":3,"title":"Khô và mát: an toàn tuyệt đối chăng?","lead":"Bốn yếu tố chi phối quần thể côn trùng: thức ăn, nhiệt độ, độ ẩm hạt và thời gian lưu trữ.","cards":[{"title":"Thức ăn và nhiệt độ","text":"Thức ăn quyết định loài nào phát triển, ở đâu. Với nhiều loài, điều kiện quanh 30 °C thuận lợi cho phát triển nhanh (giá trị tham khảo theo tài liệu)."},{"title":"Độ ẩm hạt","text":"Độ ẩm ảnh hưởng đến khả năng phát triển nhưng không tác động giống nhau lên mọi loài."},{"title":"Thời gian lưu trữ","text":"Lưu trữ lâu tạo cơ hội để quần thể phát triển qua các thế hệ khi điều kiện thuận lợi."}],"example":"(Minh họa) Lô lúa mì được sấy khô kỹ và giữ mát suốt mùa lạnh nên kho ngừng kiểm tra côn trùng. Khi hàng chuyển sang khu ấm hơn để chờ sản xuất, mọt xuất hiện trở lại và tăng nhanh.","takeaway":"Hàng khô không đồng nghĩa không có sâu mọt; làm mát chỉ làm chậm, không tiêu diệt hoàn toàn côn trùng.","source":"§3.3, tr. 3–4","visual":"Công tắc điều kiện","interactive":{"type":"switch","caption":"Bật thử các điều kiện bảo quản — diễn giải §3.3, tr. 3–4","toggles":["Hàng đã được làm khô tốt","Hàng đang được làm mát","Thời gian lưu trữ kéo dài"],"results":{"000":"Chưa chọn điều kiện nào. Tài liệu xét đồng thời bốn yếu tố: thức ăn, nhiệt độ, độ ẩm hạt và thời gian lưu trữ.","100":"Làm khô giúp hạn chế, nhưng theo FAO nhiều loài vẫn sống và phát triển được trên ngũ cốc đã làm khô tốt. Vẫn cần kiểm tra côn trùng.","010":"Nhiệt độ thấp làm chậm phát triển chứ không tiêu diệt hoàn toàn. Một số côn trùng tồn tại và có thể phát triển trở lại khi hàng sang điều kiện ấm hơn.","001":"Thời gian dài cho quần thể cơ hội phát triển qua nhiều thế hệ khi điều kiện thuận lợi; quanh 30 °C nhiều loài phát triển nhanh.","110":"Khô và mát đều làm chậm phát triển, nhưng không điều kiện nào là bằng chứng “không có mọt”. Độ ẩm tác động khác nhau lên từng loài.","101":"Hàng khô nhưng lưu lâu: những loài chịu được hạt có độ ẩm thấp, như nhóm mọt đục hạt, vẫn có thời gian để tăng số lượng.","011":"Mát nhưng lưu lâu: phát triển chậm lại, song côn trùng còn tồn tại có thể tăng trở lại khi hàng chuyển sang nơi ấm hơn.","111":"Cả ba điều kiện cùng có: tốc độ phát triển giảm, nhưng theo dõi môi trường vẫn cần đi kèm kiểm tra sinh vật (§7.1)."}},"narration":"Bạn cất bánh quy trong hộp kín, khô ráo. Bạn có dám chắc sẽ không bao giờ có mọt không? Tài liệu giải thích sự phát triển của côn trùng bằng bốn yếu tố. Đó là nguồn thức ăn, nhiệt độ, độ ẩm hạt và thời gian lưu trữ. Với nhiều loài, nhiệt độ quanh ba mươi độ xê thuận lợi cho phát triển nhanh. Có hai điều rất hay bị giảng sai. Thứ nhất, hàng khô không có nghĩa là không có sâu mọt. Nhiều loài vẫn sống được trên ngũ cốc khô tốt. Thứ hai, làm mát không tiêu diệt hoàn toàn côn trùng. Nó chỉ làm chậm, và mọt có thể phát triển trở lại khi ấm lên. Mời bạn bật thử ba công tắc để xem kết quả thay đổi.","trainer":"Kho của bạn có giai đoạn nào hàng chuyển từ nơi mát sang nơi ấm hơn không? Lúc đó ai kiểm tra côn trùng?"},{"id":13,"module":4,"title":"Nhìn hình dáng, biết được đến đâu?","lead":"Dấu hiệu hình thái phục vụ nhận diện sơ bộ tại kho, không thay thế giám định loài.","cards":[{"title":"Sàng lọc tại kho","text":"Các đặc điểm hình thái trong bài giúp khoanh nhóm nghi ngờ ngay tại hiện trường."},{"title":"Giám định chuyên môn","text":"Kết luận tên loài phải dựa trên mẫu sinh vật và phương pháp giám định phù hợp."},{"title":"Loại hàng là gợi ý","text":"Loại hàng nơi tìm thấy côn trùng chỉ là thông tin hỗ trợ, không thay cho đặc điểm giám định."}],"example":"(Minh họa) Thấy côn trùng nhỏ màu nâu trên bao cà phê, tổ trưởng ghi luôn “mọt cà phê” vào sổ. Kết quả giám định sau đó cho ra loài khác, và toàn bộ báo cáo gửi khách hàng phải đính chính.","takeaway":"Nhận ra “thuộc nhóm nào” là sàng lọc; khẳng định “là loài nào” là việc của giám định.","source":"§4 (mở đầu), tr. 4; §4.2, tr. 4","visual":"Bộ chọn","interactive":{"type":"picker","caption":"Tra thử đặc điểm sàng lọc — theo §4.1–4.6, tr. 4–5","features":[{"label":"Có vòi dài; cánh cứng thường có bốn đốm sáng","result":"Hướng sàng lọc: nhóm mọt vòi chi Sitophilus (mọt gạo hoặc mọt ngô). Hai loài gần giống nhau, kích thước có thể chồng lấp."},{"label":"Thân hình trụ; nhìn từ trên, đầu bị tấm ngực che khuất","result":"Hướng sàng lọc: mọt đục hạt nhỏ (Rhyzopertha dominica). Thường kèm lỗ đục và nhiều bột vụn."},{"label":"Thân thon dài, màu nâu đỏ","result":"Hướng sàng lọc: mọt bột đỏ (Tribolium castaneum). Nên mở rộng quan sát sang nơi tích tụ bột, hàng vỡ."},{"label":"Thân dẹt, dài; hai bên ngực có các răng nhỏ","result":"Hướng sàng lọc: mọt răng cưa (Oryzaephilus surinamensis). Thường gặp ở nguyên liệu vỡ vụn, ngũ cốc chế biến, hạt và quả khô."},{"label":"Thân bầu dục, vòi ngắn; cánh có mảng nâu sáng tối","result":"Hướng sàng lọc: mọt cà phê (Araecerus fasciculatus). Lỗ đục trên cà phê chưa đủ để khẳng định loài này."}],"goods":["Gạo","Ngô","Bột, ngũ cốc vỡ","Cà phê, ca cao","Hạt, quả khô"],"goodsNote":"Loại hàng chỉ là thông tin hỗ trợ; nhiều loài gây hại trên cùng một loại hàng.","always":"Đây mới là nhận diện sơ bộ. Kết luận loài cần mẫu sinh vật và giám định phù hợp."},"narration":"Nhìn một người từ xa, bạn đoán được đó là người quen. Nhưng muốn chắc chắn, bạn phải lại gần xem mặt. Nhận diện sâu mọt cũng có hai mức như thế. Tại kho, chúng ta dựa vào hình dáng để nhận diện sơ bộ. Ví dụ có vòi hay không, thân trụ hay thân dẹt. Tài liệu nói rõ các dấu hiệu này không thay thế giám định loài bằng phương pháp chuyên môn. Loại hàng nơi tìm thấy côn trùng cũng chỉ là thông tin hỗ trợ. Nhận ra nhóm là bước sàng lọc. Gọi đúng tên loài là bước giám định. Mời bạn chọn một đặc điểm và một loại hàng trong bộ tra thử bên dưới.","trainer":"Sổ ghi chép của kho đang ghi tên loài hay ghi nhóm nghi ngờ? Ai là người có quyền ghi tên loài?"},{"id":14,"module":4,"title":"Mọt gạo có chỉ ăn gạo?","lead":"Sitophilus oryzae: vòi dài, cánh thường có bốn đốm sáng, lớn lên bên trong hạt.","cards":[{"title":"Dấu hiệu sàng lọc","text":"Con trưởng thành có vòi dài; cánh cứng thường có bốn đốm sáng."},{"title":"Phát triển trong hạt","text":"Hạt có thể bị tiêu hao phần bên trong trước khi xuất hiện lỗ thoát rõ ràng; quan sát bề mặt có giới hạn."},{"title":"Phạm vi ký chủ","text":"Loài này có thể gặp trên gạo và nhiều loại ngũ cốc khác."}],"example":"(Minh họa) Kho chứa lúa mì và ngô cho rằng “mọt gạo” chỉ liên quan kho gạo nên không đưa loài này vào danh sách theo dõi. Khi mọt vòi có đốm sáng xuất hiện trên lúa mì, không ai nhận ra để báo sớm.","takeaway":"Tên thông dụng không đủ để suy ra phạm vi ký chủ: mọt gạo không chỉ gây hại gạo.","source":"§4.1, tr. 4","visual":"","narration":"Cá sấu không phải là cá. Cái tên đôi khi đánh lừa chúng ta. Mọt gạo cũng vậy. Nghe tên, ta tưởng nó chỉ ăn gạo. Thật ra theo tài liệu, loài này có thể gặp trên gạo và nhiều loại ngũ cốc khác. Về hình dáng, con trưởng thành có vòi dài. Cánh cứng thường có bốn đốm sáng. Điểm kiến thức quan trọng nhất là khả năng phát triển bên trong hạt. Hạt có thể bị ăn rỗng dần từ trong ra, trước khi lỗ thoát hiện rõ. Vì vậy, chỉ nhìn bề mặt hạt là chưa đủ để phát hiện nhiễm. Hãy nhớ, tên thông dụng không cho biết phạm vi ký chủ của loài.","trainer":"Những tên gọi thông dụng nào khác trong kho dễ khiến nhân viên hiểu sai về mặt hàng bị hại?"},{"id":15,"module":4,"title":"Mọt trên ngô có chắc là mọt ngô?","lead":"Sitophilus zeamais gần giống mọt gạo và cũng gây hại nhiều loại ngũ cốc.","cards":[{"title":"Hình dạng gần giống","text":"Mọt ngô có hình dạng gần giống mọt gạo; nhìn tại kho rất khó tách hai loài."},{"title":"Kích thước chồng lấp","text":"Kích thước hai loài có thể chồng lấp, nên “con lớn hơn” không phải căn cứ kết luận duy nhất."},{"title":"Nổi bật trên ngô","text":"FAO ghi nhận loài này có vai trò nổi bật trên ngô nhưng cũng xuất hiện trên các ngũ cốc khác."}],"example":"(Bài giảng KDTV, §8 câu 3) Tìm thấy mọt vòi trên ngô chưa đủ để kết luận là mọt ngô, vì nhiều loài cùng gây hại một loại ngũ cốc. Nếu báo cáo ghi sai tên loài, mọi tra cứu danh mục về sau đều lệch.","takeaway":"Phát hiện mọt trên ngô chưa đủ để xác định chắc chắn đó là Sitophilus zeamais.","source":"§4.2, tr. 4; §8 câu 3, tr. 9","visual":"","narration":"Hai anh em sinh đôi đứng cạnh nhau. Bạn có dám gọi tên từng người chỉ vì một người trông cao hơn chút không? Mọt ngô và mọt gạo cũng giống nhau như vậy. Tài liệu lưu ý kích thước của hai loài có thể chồng lấp. Vì thế, không dùng đặc điểm con lớn hơn làm căn cứ duy nhất. Mọt ngô có vai trò nổi bật trên ngô. Nhưng nó cũng xuất hiện trên các ngũ cốc khác. Cho nên thấy mọt trên ngô chưa đủ để nói chắc đó là mọt ngô. Nhận ra một cá thể thuộc nhóm mọt vòi là bước sàng lọc. Phân biệt chính xác hai loài là việc của giám định.","trainer":"Nếu chỉ được ghi một dòng vào sổ khi thấy mọt vòi trên ngô, bạn sẽ ghi thế nào cho đúng mức chắc chắn?"},{"id":16,"module":4,"title":"Hàng khô vẫn bị mọt đục hạt?","lead":"Rhyzopertha dominica: thân hình trụ, đầu khuất dưới tấm ngực, là loài sơ cấp quan trọng.","cards":[{"title":"Dấu hiệu sàng lọc","text":"Thân hình trụ; khi nhìn từ trên, đầu thường bị tấm ngực che khuất."},{"title":"Dấu vết trên hàng","text":"Hàng bị hại có thể có lỗ đục và nhiều bột vụn."},{"title":"Chịu được hạt khô","text":"Nhóm mọt đục hạt vẫn có thể có ý nghĩa đáng kể trên hạt có độ ẩm thấp."}],"example":"(Minh họa) Lô lúa mì có phiếu độ ẩm đạt nên được miễn kiểm tra côn trùng. Khi mở bao, công nhân thấy nhiều bột vụn mịn dưới đáy và những hạt thủng lỗ, kèm côn trùng nhỏ thân trụ không thấy rõ đầu.","takeaway":"Độ ẩm đạt yêu cầu bảo quản không thay thế việc kiểm tra côn trùng.","source":"§4.4, tr. 5","visual":"","narration":"Nhiều người tin rằng mọt chỉ thích hàng ẩm. Hàng khô thì yên tâm. Thật vậy không? Hãy làm quen với mọt đục hạt nhỏ. Thân nó hình trụ. Nhìn từ trên xuống, bạn khó thấy đầu vì bị tấm ngực che khuất. Hàng bị nó gây hại thường có lỗ đục và nhiều bột vụn. Đây là loài gây hại sơ cấp quan trọng trên ngũ cốc. Điều đáng nhớ là nhóm mọt đục hạt vẫn có thể gây hại đáng kể trên hạt có độ ẩm thấp. Tài liệu vì thế kết luận rất rõ. Độ ẩm đạt yêu cầu bảo quản không thay thế việc kiểm tra côn trùng. Hai việc ấy phải đi song song.","trainer":"Có quy định nội bộ nào đang cho phép bỏ kiểm tra côn trùng khi độ ẩm đạt không? Rủi ro là gì?"},{"id":17,"module":5,"title":"Mọt bột đỏ dẫn ta đi tìm ở đâu?","lead":"Tribolium castaneum: thân thon dài, nâu đỏ, đại diện điển hình của nhóm thứ cấp.","cards":[{"title":"Dấu hiệu sàng lọc","text":"Thân thon dài, màu nâu đỏ; thường được chú ý trong bột, ngũ cốc vỡ và nguyên liệu khô."},{"title":"Dấu hiệu đi kèm","text":"Có thể kèm côn trùng lẫn trong bột và suy giảm chất lượng cảm quan."},{"title":"Mở rộng hướng nhìn","text":"Khi phát hiện, cần quan sát cả nơi tích tụ bột, hàng vỡ và nguyên liệu tồn dư, không chỉ bao hàng."}],"example":"(Minh họa) Sau khi thấy mọt nâu đỏ, tổ vệ sinh lau sạch mặt ngoài toàn bộ bao bột rồi báo xong việc. Tuần sau côn trùng lại xuất hiện, vì lớp bột cũ trong khe sàn và gầm băng tải vẫn còn nguyên.","takeaway":"Chỉ làm sạch bề mặt bao hàng có thể bỏ sót nguồn tồn tại của côn trùng trong kho.","source":"§4.3, tr. 5","visual":"","narration":"Thấy một con kiến trên bàn, bạn lau mặt bàn là xong ư? Người có kinh nghiệm sẽ lần theo để tìm chỗ vụn bánh. Mọt bột đỏ cũng đòi hỏi cách nghĩ ấy. Loài này có thân thon dài, màu nâu đỏ. Nó thường được chú ý trong bột, ngũ cốc vỡ và nguyên liệu khô. Đây là đại diện điển hình của nhóm gây hại thứ cấp. Khi phát hiện, đừng chỉ nhìn bao hàng. Hãy mở rộng quan sát sang nơi tích tụ bột, hàng vỡ và nguyên liệu tồn dư. Hiểu đặc tính thức ăn giúp ta giải thích một điều. Chỉ làm sạch bề mặt bao có thể bỏ sót nguồn tồn tại của côn trùng trong kho.","trainer":"Nếu thấy mọt bột đỏ ở khu đóng bao, bạn sẽ kiểm tra thêm ba vị trí nào trước tiên?"},{"id":18,"module":5,"title":"Răng cưa nhỏ, câu chuyện lớn","lead":"Oryzaephilus surinamensis: thân dẹt, dài, hai bên ngực có răng nhỏ.","cards":[{"title":"Dấu hiệu sàng lọc","text":"Thân dẹt, dài; hai bên ngực có các răng nhỏ."},{"title":"Nơi thường gặp","text":"Thường được chú ý ở ngũ cốc chế biến, nguyên liệu vỡ vụn, hạt và quả khô."},{"title":"Liên hệ tình trạng hàng","text":"Phần vỡ và tổn thương của hàng có thể tạo điều kiện cho nhóm này phát triển."}],"example":"(Minh họa) Lô hạt điều có tỷ lệ vỡ cao được chấp nhận vì “chỉ ảnh hưởng ngoại quan”. Sau thời gian lưu kho, chính những thùng nhiều hạt vỡ là nơi đầu tiên xuất hiện côn trùng thân dẹt.","takeaway":"Hạt vỡ không chỉ là chỉ tiêu ngoại quan; đó còn là điều kiện cho nhóm thứ cấp phát triển.","source":"§4.5, tr. 5","visual":"","narration":"Một bức tường có vết nứt nhỏ. Người ta bảo chỉ xấu chút thôi. Nhưng nước sẽ thấm vào từ chính vết nứt ấy. Hạt vỡ trong lô hàng cũng là vết nứt như vậy. Mọt răng cưa có thân dẹt và dài. Hai bên ngực của nó có các răng nhỏ, đúng như tên gọi. Loài này thường được chú ý ở ngũ cốc chế biến, nguyên liệu vỡ vụn, hạt và quả khô. Nó thường được xem là sinh vật gây hại thứ cấp. Tài liệu đề nghị liên hệ đặc tính này với tình trạng hàng. Phần vỡ và tổn thương có thể tạo điều kiện cho mọt phát triển. Vì thế, tỷ lệ vỡ không chỉ là chuyện ngoại quan.","trainer":"Chỉ tiêu tỷ lệ vỡ ở cơ sở bạn hiện chỉ gắn với chất lượng, hay đã gắn với rủi ro côn trùng?"},{"id":19,"module":5,"title":"Lỗ đục trên cà phê: thủ phạm là ai?","lead":"Araecerus fasciculatus: thân bầu dục, vòi ngắn, cánh có mảng nâu sáng tối.","cards":[{"title":"Dấu hiệu sàng lọc","text":"Thân bầu dục, vòi ngắn; cánh có các mảng màu nâu sáng tối."},{"title":"Hàng cần chú ý","text":"Trong phạm vi tài liệu: cà phê, ca cao và một số loại hạt, quả khô; dấu hiệu gồm lỗ đục và bột vụn."},{"title":"Triệu chứng là định hướng","text":"Kết luận loài cần dựa vào mẫu sinh vật và giám định phù hợp."}],"example":"(Minh họa) Thấy vài hạt cà phê nhân có lỗ đục, kho báo khách hàng rằng lô bị “mọt cà phê”. Không ai thu được con côn trùng nào để gửi giám định, nên khi khách yêu cầu bằng chứng thì kho không có.","takeaway":"Không đồng nhất mọi lỗ đục trên cà phê với mọt cà phê.","source":"§4.6, tr. 5","visual":"","narration":"Thấy cửa kính vỡ, bạn có dám nói ngay ai là người ném đá không? Vết vỡ chỉ cho biết có chuyện xảy ra. Lỗ đục trên hạt cà phê cũng như vậy. Mọt cà phê có thân bầu dục và vòi ngắn. Cánh của nó có các mảng màu nâu sáng tối xen nhau. Trong phạm vi tài liệu, cần chú ý loài này trên cà phê, ca cao và một số loại hạt, quả khô. Dấu hiệu được mô tả gồm lỗ đục và bột vụn. Tuy nhiên, tài liệu dặn không nên đồng nhất mọi lỗ đục trên cà phê với loài này. Triệu chứng trên hàng chỉ là thông tin định hướng. Muốn kết luận loài, phải có mẫu sinh vật và giám định phù hợp.","trainer":"Khi thấy triệu chứng trên hàng mà không bắt được côn trùng, quy trình của bạn yêu cầu làm gì tiếp?"},{"id":20,"module":5,"title":"Sáu loài, năm sai lầm cần tránh","lead":"Bảng hệ thống hóa gắn mỗi loài hoặc nhóm với một kiến thức cần nhớ và một sai lầm.","cards":[{"title":"Mọt vòi, mọt đục hạt","text":"Mọt vòi: ấu trùng trong hạt, đừng định danh bằng loại hàng hay kích thước. Mọt đục hạt: đừng nghĩ hàng khô là hết nguy cơ."},{"title":"Hai loài thứ cấp","text":"Mọt bột đỏ: đừng chỉ kiểm tra hạt nguyên hoặc mặt ngoài bao. Mọt răng cưa: đừng kết luận loài chỉ từ màu sắc chung."},{"title":"Mọt cà phê","text":"Cần chú ý trong kho cà phê; hình thái và mẫu sinh vật quan trọng hơn triệu chứng lỗ đục."}],"example":"(Minh họa) Phiếu kiểm tra của một kho chỉ có một ô “có mọt / không mọt”. Suốt một năm, mọi loài đều được ghi chung một chữ, nên không ai nhận ra côn trùng ở khu bột khác hẳn côn trùng ở khu hạt nguyên.","takeaway":"Bảng này giúp sàng lọc và ghi nhớ; nó không biến người đọc thành người giám định.","source":"§4.7, tr. 6","visual":"Bảng tóm tắt","interactive":{"type":"table","caption":"Tóm tắt bảng ở §4.7, tr. 6 — kiến thức cần nhớ và sai lầm cần tránh","head":["Loài hoặc nhóm","Kiến thức cần nhớ","Sai lầm cần tránh"],"rows":[["S. oryzae, S. zeamais","Có vòi; ấu trùng phát triển trong hạt","Định danh chỉ bằng loại hàng hoặc kích thước"],["R. dominica","Thân hình trụ; đầu khó thấy từ phía trên; gây hại hạt nguyên","Cho rằng hàng khô thì không có nguy cơ"],["T. castaneum","Liên quan nhiều đến bột, phần vỡ và nguyên liệu tồn dư","Chỉ kiểm tra hạt nguyên hoặc mặt ngoài bao"],["O. surinamensis","Thân dẹt; có răng hai bên ngực","Kết luận loài chỉ từ màu sắc chung"],["A. fasciculatus","Cần chú ý trong kho cà phê; hình thái và mẫu sinh vật quan trọng","Đồng nhất mọi lỗ đục trên cà phê với mọt cà phê"]]},"narration":"Trước giờ thi, học trò giỏi thường tự kẻ một bảng tóm tắt. Tài liệu cũng làm thế với sáu loài sâu mọt. Mỗi dòng gồm một kiến thức cần nhớ và một sai lầm cần tránh. Với mọt gạo và mọt ngô, đừng định danh chỉ bằng loại hàng hoặc kích thước. Với mọt đục hạt nhỏ, đừng cho rằng hàng khô thì hết nguy cơ. Với mọt bột đỏ, đừng chỉ kiểm tra hạt nguyên hay mặt ngoài bao. Với mọt răng cưa, đừng kết luận loài chỉ từ màu sắc chung. Với mọt cà phê, đừng quy mọi lỗ đục cho nó. Mời bạn bấm nút che cột cuối trong bảng rồi tự nhớ lại từng sai lầm.","trainer":"Che cột “sai lầm cần tránh” và cho từng nhóm học viên điền lại; sai lầm nào hay gặp nhất ở cơ sở?"},{"id":21,"module":6,"title":"Thấy bột vụn, đã biết thủ phạm chưa?","lead":"Mỗi dấu hiệu riêng lẻ có giá trị nhưng chưa đủ để xác định toàn bộ tình trạng lô hàng.","cards":[{"title":"Bốn dấu hiệu thường gặp","text":"Lỗ đục, hạt rỗng, bột vụn và côn trùng trên bao là những dấu hiệu có giá trị."},{"title":"Xem xét đồng thời","text":"Cần đặt dấu hiệu cạnh côn trùng tìm được, tình trạng hạt và vị trí phát hiện."},{"title":"Ghi nhận đầy đủ","text":"Tài liệu gốc yêu cầu ghi hình thái, tình trạng sống hay chết, mã lô và phạm vi ảnh hưởng."}],"example":"(Bài giảng KDTV, §5.1) Bột vụn có thể đi cùng hoạt động của mọt đục hạt, nhưng phải xét cả côn trùng tìm được, tình trạng hạt và vị trí. Một biên bản chỉ ghi “có bột vụn” khiến người đọc sau không biết lô nào, mức nào.","takeaway":"Dấu hiệu cho biết có điều bất thường; nó chưa cho biết nguyên nhân đã được xác định.","source":"§5.1, tr. 6","visual":"","narration":"Bác sĩ thấy bệnh nhân ho. Ho là dấu hiệu, chưa phải là chẩn đoán. Muốn biết bệnh, bác sĩ còn phải khám thêm. Ở kho cũng vậy. Lỗ đục, hạt rỗng, bột vụn và côn trùng trên bao đều là dấu hiệu có giá trị. Nhưng mỗi dấu hiệu riêng lẻ chưa đủ để xác định tình trạng của cả lô. Tài liệu lấy ví dụ về bột vụn. Nó có thể đi cùng hoạt động của mọt đục hạt. Song ta phải xem xét cả côn trùng tìm được, tình trạng hạt và vị trí phát hiện. Hãy ghi nhận hình thái, côn trùng sống hay chết, mã lô và phạm vi ảnh hưởng. Đừng kết luận chỉ từ một triệu chứng.","trainer":"Lấy một biên bản phát hiện côn trùng gần đây: nó có đủ bốn thông tin tài liệu yêu cầu ghi nhận không?"},{"id":22,"module":6,"title":"Ba nấc thang của một kết luận","lead":"Phát hiện dấu hiệu, nhận diện sơ bộ và kết luận chuyên môn là ba cấp độ khác nhau.","cards":[{"title":"Phát hiện bất thường","text":"Có lỗ đục, bột vụn hoặc côn trùng: mới chỉ ghi nhận rằng có dấu hiệu."},{"title":"Nhận diện sơ bộ","text":"Hình thái phù hợp với một nhóm hoặc loài nghi ngờ; dùng từ “nghi” khi báo cáo."},{"title":"Kết luận chuyên môn","text":"Giám định xác định loài và đánh giá theo yêu cầu áp dụng."}],"example":"(Bài giảng KDTV, §5.2) Cụm từ “nghi mọt thuộc chi Sitophilus” thể hiện mức chắc chắn khác hẳn “đã xác định Sitophilus zeamais”. Viết nhầm nấc, người nhận báo cáo có thể ra quyết định về lô hàng trên một điều chưa ai kiểm chứng.","takeaway":"Chữ “nghi” trong báo cáo không phải là thiếu tự tin; đó là ghi đúng mức độ chắc chắn.","source":"§5.2, tr. 6","visual":"Tình huống 2 bước","interactive":{"type":"scenario","caption":"Tình huống: vài con côn trùng có vòi trong mẫu ngô — theo §5.1–5.3, tr. 6","steps":[{"q":"Bước 1 · Bạn ghi vào báo cáo thế nào?","options":[{"t":"Đã xác định Sitophilus zeamais","ok":false,"fb":"Chưa đúng. Đây là kết luận chuyên môn, cần giám định. Hàng là ngô không đủ để gọi tên loài (§4.2, §5.2)."},{"t":"Nghi mọt thuộc chi Sitophilus, chờ giám định","ok":true,"fb":"Đúng. Đây là nấc nhận diện sơ bộ, ghi đúng mức độ chắc chắn (§5.2)."},{"t":"Lô hàng nhiễm đối tượng kiểm dịch","ok":false,"fb":"Chưa đúng. Chưa xác định loài, và không thể mặc định mọi sâu mọt kho là đối tượng kiểm dịch (§8 câu 6)."}]},{"q":"Bước 2 · Việc tiếp theo hợp lý nhất là gì?","options":[{"t":"Hun trùng ngay, vì thấy một con là phải xử lý","ok":false,"fb":"Chưa đúng. Tài liệu không nêu quy tắc chung như vậy; cần xác định loài, loại hàng, mục đích sử dụng và yêu cầu kiểm dịch (§5.3)."},{"t":"Bỏ qua, vì chỉ có vài con","ok":false,"fb":"Chưa đúng. Côn trùng tìm được là dấu hiệu có giá trị và cần được ghi nhận (§5.1)."},{"t":"Ghi hình thái, sống hay chết, mã lô, phạm vi ảnh hưởng và chuyển mẫu giám định","ok":true,"fb":"Đúng. Đó là các thông tin tài liệu yêu cầu ghi nhận trước khi kết luận (§5.1)."}]}]},"narration":"Ngoài đường có tiếng động lạ. Bạn nói có tiếng động, hay nói chắc chắn là xe tải vừa đâm vào cột điện? Hai câu ấy khác nhau rất xa. Tài liệu tách kết luận thành ba cấp độ. Cấp một là phát hiện dấu hiệu bất thường, như lỗ đục hay côn trùng. Cấp hai là nhận diện sơ bộ, khi hình thái phù hợp với một nhóm nghi ngờ. Cấp ba là kết luận chuyên môn, do giám định xác định loài. Viết nghi mọt thuộc nhóm mọt vòi khác hẳn viết đã xác định mọt ngô. Tách ba cấp độ giúp bạn báo cáo chính xác hơn. Mời bạn thử tình huống hai bước bên dưới và chọn cách ghi phù hợp.","trainer":"Cho học viên viết lại một câu báo cáo cũ theo đúng cấp độ kết luận. Câu mới khác gì?"},{"id":23,"module":6,"title":"Thấy một con mọt là phải hun trùng?","lead":"ISPM 31 phân biệt số chấp nhận trong mẫu với mức nhiễm của lô làm phát sinh hành động.","cards":[{"title":"Hai khái niệm","text":"Số cá thể hoặc đơn vị nhiễm được chấp nhận trong mẫu khác với mức nhiễm toàn lô làm phát sinh hành động kiểm dịch."},{"title":"Số chấp nhận bằng không","text":"Nhiều cơ quan bảo vệ thực vật quốc gia đặt số chấp nhận bằng không đối với dịch hại kiểm dịch."},{"title":"Không phải cho mọi loài","text":"Điều đó không có nghĩa mọi côn trùng kho trong mọi bối cảnh đều được đánh giá theo cùng một ngưỡng."}],"example":"(Bài giảng KDTV, §5.3) Tài liệu khuyên không đưa ra quy tắc chung kiểu “thấy một con mọt là phải hun trùng”. Một kho áp dụng đúng câu đó sẽ hun trùng lặp lại nhiều lần mà vẫn chưa biết loài nào, hàng dùng vào việc gì.","takeaway":"Số chấp nhận bằng không áp dụng cho dịch hại kiểm dịch, không tự động áp cho mọi côn trùng kho.","source":"§5.3, tr. 6","visual":"","narration":"Có biển báo cấm dừng xe trước cổng bệnh viện. Vậy có phải mọi con đường đều cấm dừng xe không? Không. Quy tắc phụ thuộc vào nơi chốn và đối tượng. Ngưỡng xử lý sâu mọt cũng vậy. Tiêu chuẩn quốc tế về lấy mẫu lô hàng phân biệt hai điều. Một là số cá thể được chấp nhận trong mẫu. Hai là mức nhiễm của toàn lô làm phát sinh hành động kiểm dịch. Nhiều cơ quan bảo vệ thực vật đặt số chấp nhận bằng không cho dịch hại kiểm dịch. Nhưng điều đó không áp cho mọi côn trùng kho trong mọi bối cảnh. Trước khi kết luận, cần xác định loài, loại hàng, mục đích sử dụng và yêu cầu kiểm dịch liên quan.","trainer":"Cơ sở bạn có quy tắc truyền miệng nào kiểu “thấy là xử lý”? Nó dựa trên căn cứ gì?"},{"id":24,"module":6,"title":"Mọi sâu mọt kho đều là đối tượng kiểm dịch?","lead":"Tình trạng kiểm dịch được xác định theo tiêu chí và danh mục quản lý.","cards":[{"title":"Hai nhóm khác nhau","text":"Cần phân biệt sinh vật gây hại kho với sinh vật thuộc diện quản lý kiểm dịch."},{"title":"Theo tiêu chí, danh mục","text":"Tình trạng kiểm dịch không xác định chỉ bằng khả năng gây hại hàng hóa."},{"title":"Bốn điều cần biết trước","text":"Loài, loại hàng, mục đích sử dụng và yêu cầu kiểm dịch liên quan phải rõ trước khi kết luận."}],"example":"(Minh họa) Nhân viên bán hàng nghe kho báo “có mọt” liền thông báo cho khách rằng lô hàng “dính kiểm dịch”. Khách hoảng hốt hủy đơn, trong khi loài được giám định sau đó là một loài mọt kho phổ biến.","takeaway":"“Có côn trùng” chưa phải là “vi phạm kiểm dịch”; phải xác định loài và yêu cầu áp dụng trước.","source":"§8 câu 6, tr. 9; §5.3, tr. 6","visual":"","narration":"Mọi con chó đều là động vật. Nhưng không phải mọi động vật đều là chó. Quan hệ giữa sâu mọt kho và đối tượng kiểm dịch cũng tương tự. Một loài có thể gây hại hàng trong kho. Điều đó chưa làm cho nó trở thành đối tượng kiểm dịch. Theo tài liệu, tình trạng kiểm dịch được xác định theo tiêu chí và danh mục quản lý. Nó không chỉ dựa vào khả năng gây hại hàng hóa. Vì vậy, đừng nói lô hàng vi phạm kiểm dịch chỉ vì có côn trùng. Hãy trả lời bốn câu trước. Loài nào? Hàng gì? Dùng vào việc gì? Yêu cầu kiểm dịch nào đang áp dụng?","trainer":"Thông tin “có mọt” đi từ kho đến khách hàng qua những ai, và có thể bị nói quá ở khâu nào?"},{"id":25,"module":7,"title":"Nếm một thìa, biết cả nồi canh?","lead":"Lấy mẫu là kiểm tra một phần để đánh giá cả lô, nên cách lấy quan trọng như số lượng.","cards":[{"title":"Mục đích lấy mẫu","text":"ISPM 31 hướng dẫn chọn phương pháp lấy mẫu để kiểm tra hoặc thử nghiệm, nhằm xác minh sự phù hợp với yêu cầu kiểm dịch."},{"title":"Bốn câu hỏi","text":"Lấy từ lô nào, chọn đơn vị mẫu ra sao, muốn phát hiện mức nhiễm nào, phương pháp kiểm tra phát hiện được đến đâu."},{"title":"Ba khái niệm gắn kèm","text":"Các câu hỏi trên gắn với mức phát hiện, hiệu quả phát hiện và mức tin cậy trong ISPM 31."}],"example":"(Minh họa) Kho tự hào vì luôn lấy đủ số bao theo kế hoạch. Nhưng mẫu của hai lô khác nhau bị gộp chung một túi, nên khi kết quả có côn trùng, không ai nói được nó thuộc lô nào.","takeaway":"Câu hỏi không chỉ là “lấy bao nhiêu” mà còn là lấy từ đâu, chọn thế nào và phát hiện được đến đâu.","source":"§6.1, tr. 7","visual":"","narration":"Bạn nếm một thìa để biết cả nồi canh mặn hay nhạt. Nhưng nếu chưa khuấy đều thì sao? Thìa canh ấy có thể đánh lừa bạn. Lấy mẫu lô hàng cũng là kiểm tra một phần để đánh giá toàn bộ. Tiêu chuẩn quốc tế về lấy mẫu yêu cầu phương pháp phải phù hợp mục tiêu phát hiện và đặc điểm lô hàng. Tài liệu nêu bốn câu hỏi. Lấy từ lô nào? Chọn đơn vị mẫu theo cách nào? Muốn phát hiện mức nhiễm nào? Phương pháp kiểm tra phát hiện được sinh vật đến đâu? Như vậy, kiến thức quan trọng không chỉ là lấy bao nhiêu. Cách lấy và khả năng phát hiện cũng quyết định giá trị của kết quả.","trainer":"Kế hoạch lấy mẫu của bạn trả lời được mấy trong bốn câu hỏi của tài liệu?"},{"id":26,"module":7,"title":"Lấy chỗ dễ lấy: tiện nhưng có đúng?","lead":"Mẫu thuận tiện không mặc nhiên là mẫu đại diện cho lô hàng.","cards":[{"title":"Vị trí dễ tiếp cận","text":"Chỉ lấy ở những chỗ dễ với tới có thể không phản ánh đầy đủ tình trạng lô."},{"title":"Giới hạn của quan sát","text":"Với loài phát triển trong hạt, hạn chế còn nằm ở khả năng phát hiện của phương pháp quan sát."},{"title":"Nội bộ và kiểm dịch","text":"Mẫu nội bộ hỗ trợ quản lý chất lượng, phát hiện sớm; mẫu kiểm dịch lấy theo phương pháp và yêu cầu chuyên môn áp dụng."}],"example":"(Minh họa) Kho chỉ rút mẫu ở hàng bao ngoài cùng, ngang tầm tay, và mẫu luôn sạch. Khi dỡ hàng, công nhân phát hiện các bao nằm sâu sát tường có nhiều mọt, nơi chưa lần nào được lấy mẫu.","takeaway":"Kiểm tra nội bộ không tự thay thế việc lấy mẫu hoặc kết luận kiểm dịch của cơ quan có thẩm quyền.","source":"§6.2, tr. 7","visual":"","narration":"Muốn biết cả lớp học có hiểu bài không, thầy giáo chỉ hỏi mấy bạn ngồi bàn đầu. Kết quả có đáng tin không? Chưa chắc. Trong kho, ta cũng hay lấy mẫu ở chỗ dễ với tới. Tài liệu nhắc rằng mẫu thuận tiện không mặc nhiên là mẫu đại diện. Với loài phát triển bên trong hạt, hạn chế còn nằm ở khả năng phát hiện của cách quan sát. Ngoài ra, cần phân biệt hai loại mẫu. Mẫu kiểm tra nội bộ giúp quản lý chất lượng và phát hiện sớm. Mẫu kiểm dịch được lấy theo phương pháp và yêu cầu chuyên môn áp dụng. Việc kiểm tra nội bộ không thay thế kết luận của cơ quan có thẩm quyền.","trainer":"Vẽ sơ đồ kho và đánh dấu những vị trí chưa bao giờ được lấy mẫu. Vì sao?"},{"id":27,"module":7,"title":"“Không phát hiện” nghĩa là gì?","lead":"Kết quả âm tính chỉ nói về phạm vi mẫu và phương pháp đã dùng.","cards":[{"title":"Nghĩa chính xác","text":"Không phát hiện sinh vật trong phạm vi mẫu và phương pháp đã sử dụng."},{"title":"Mức độ bảo đảm","text":"Vì chỉ khảo sát một phần lô, mức bảo đảm phụ thuộc thiết kế lấy mẫu và hiệu quả phát hiện."},{"title":"Lưu ý mọt trong hạt","text":"Không thấy con trưởng thành trên bề mặt không đủ để loại trừ các giai đoạn khác."}],"example":"(Minh họa) Phiếu kiểm tra ghi “không có mọt” và được chuyển cho khách như một lời cam kết. Vài tuần sau khách khiếu nại vì mọt xuất hiện; kho không giải thích được vì phiếu không ghi mẫu lấy ở đâu, kiểm bằng cách nào.","takeaway":"“Không phát hiện” khác với “không tồn tại”.","source":"§6.3, tr. 7; §8 câu 5, tr. 9","visual":"","narration":"Bạn tìm chìa khóa trong túi áo và không thấy. Bạn có dám nói chìa khóa không ở trong nhà không? Bạn chỉ có thể nói là không thấy ở chỗ đã tìm. Kết quả kiểm tra sâu mọt cũng phải được hiểu như vậy. Kết quả âm tính nghĩa là không phát hiện sinh vật trong phạm vi mẫu và phương pháp đã dùng. Lấy mẫu chỉ khảo sát một phần lô. Vì thế, mức bảo đảm phụ thuộc vào thiết kế lấy mẫu và hiệu quả phát hiện. Điều này đặc biệt quan trọng với mọt phát triển bên trong hạt. Không thấy mọt trưởng thành trên bề mặt chưa loại trừ được các giai đoạn khác. Không phát hiện khác với không tồn tại.","trainer":"Phiếu kết quả của bạn đang ghi “không có” hay “không phát hiện”? Sự khác biệt ảnh hưởng gì khi có khiếu nại?"},{"id":28,"module":7,"title":"Một túi mẫu thiếu nhãn có giá trị gì?","lead":"Mẫu chỉ có giá trị truy xuất khi đi kèm thông tin và được bảo quản đúng mục đích giám định.","cards":[{"title":"Năm thông tin gắn mẫu","text":"Mã lô, vị trí lấy, ngày giờ, người thực hiện và tình trạng hàng."},{"title":"Giữ mẫu đúng cách","text":"Mẫu phải được lưu giữ, bảo quản và vận chuyển phù hợp mục đích giám định."},{"title":"Quy chuẩn được dẫn","text":"Tài liệu gốc dẫn QCVN 01-141:2013/BNNPTNT về lấy mẫu và QCVN 01-175:2014/BNNPTNT về lưu giữ, bảo quản, vận chuyển mẫu."}],"example":"(Minh họa) Phòng giám định trả kết quả rõ ràng về loài mọt trong một túi mẫu. Nhưng nhãn túi chỉ ghi “ngô, kho B”. Ba lô ngô cùng nằm ở kho B, và không ai biết kết quả đó thuộc về lô nào.","takeaway":"Thông tin mẫu không phải thủ tục hành chính phụ; đó là sợi dây nối kết quả giám định với đúng lô hàng.","source":"§6.4, tr. 8","visual":"Checklist 6 mục","interactive":{"type":"checklist","caption":"Phiếu tự kiểm thông tin mẫu — theo §6.4, tr. 8","items":["Mã lô được ghi trên mẫu","Vị trí lấy mẫu được ghi rõ","Ngày, giờ lấy mẫu","Người thực hiện lấy mẫu","Tình trạng hàng tại thời điểm lấy","Mẫu được lưu giữ, bảo quản, vận chuyển phù hợp mục đích giám định"]},"narration":"Bạn nhận một phong bì kết quả xét nghiệm nhưng không ghi tên ai. Kết quả ấy dùng được cho người nào? Không cho ai cả. Một túi mẫu thiếu thông tin cũng vô dụng như vậy. Theo tài liệu, mẫu có giá trị truy xuất cần gắn với mã lô, vị trí lấy và ngày giờ. Cần ghi cả người thực hiện và tình trạng hàng. Mẫu còn phải được lưu giữ, bảo quản và vận chuyển phù hợp mục đích giám định. Thông tin mẫu không phải phần hành chính phụ trợ. Đó là căn cứ nối kết quả giám định với đúng lô hàng. Mời bạn đánh dấu sáu mục trong phiếu tự kiểm và in ra nếu cần.","trainer":"Lấy ngẫu nhiên một mẫu đang lưu: nhãn có đủ năm thông tin không? Thiếu mục nào nhiều nhất?"},{"id":29,"module":8,"title":"Diệt con đang thấy đã đủ chưa?","lead":"Kiểm soát phải tác động vào điều kiện tồn tại của côn trùng, không chỉ vào cá thể đang thấy.","cards":[{"title":"Quản lý kho quyết định","text":"FAO nhấn mạnh quản lý kho ảnh hưởng lớn đến sự phát triển và kiểm soát côn trùng."},{"title":"Bốn điều kiện tồn tại","text":"Thức ăn, điều kiện môi trường, thời gian lưu trữ và cách tổ chức bảo quản."},{"title":"Yếu tố nào, việc nấy","text":"Vệ sinh, phân lô, theo dõi môi trường và quản lý hàng tồn đều có cơ sở sinh học riêng."}],"example":"(Minh họa) Kho xịt diệt hết côn trùng nhìn thấy trên tường và coi như xong. Hàng nghi nhiễm vẫn nằm chung khu với hàng mới, bột rơi vãi vẫn còn dưới pallet, và tháng sau côn trùng lại xuất hiện ở đúng khu đó.","takeaway":"Theo dõi nhiệt độ, độ ẩm không thay được kiểm tra sinh vật; hai việc phải kết hợp.","source":"§7.1, tr. 8","visual":"Bảng tóm tắt","interactive":{"type":"table","caption":"Tóm tắt bảng ở §7.1, tr. 8 — yếu tố, ý nghĩa sinh học, liên hệ quản lý kho","head":["Yếu tố","Ý nghĩa sinh học","Liên hệ quản lý kho"],"rows":[["Nguyên liệu rơi vãi, bụi bột","Cung cấp thức ăn, nhất là cho nhóm gây hại thứ cấp","Vệ sinh góp phần loại bỏ nguồn duy trì quần thể"],["Hàng và bao bì nghi nhiễm","Có thể mang côn trùng sang khu vực khác","Phân lô và kiểm soát luồng hàng giúp hạn chế lây nhiễm chéo"],["Điều kiện nhiệt độ, độ ẩm","Ảnh hưởng tốc độ phát triển, khác nhau giữa các loài","Theo dõi môi trường cần kết hợp kiểm tra sinh vật"],["Thời gian lưu trữ","Tạo cơ hội cho quần thể tăng số lượng","Quản lý hàng tồn cần đi cùng giám sát côn trùng"]]},"narration":"Nhổ cỏ mà để lại rễ, cỏ sẽ mọc lại. Diệt những con mọt đang thấy mà để nguyên điều kiện sống của chúng cũng như vậy. Tổ chức Lương thực và Nông nghiệp Liên Hợp Quốc nhấn mạnh vai trò của quản lý kho. Kiểm soát không chỉ là tiêu diệt cá thể đang nhìn thấy. Nó còn liên quan đến thức ăn, môi trường, thời gian lưu trữ và cách tổ chức bảo quản. Bụi bột là thức ăn, nên vệ sinh loại bỏ nguồn nuôi quần thể. Hàng nghi nhiễm có thể mang côn trùng đi, nên cần phân lô và kiểm soát luồng hàng. Mời bạn xem bảng bên dưới và thử che cột cuối để tự nhớ lại.","trainer":"Trong bốn yếu tố của bảng, yếu tố nào ở kho bạn đang được kiểm soát yếu nhất? Bằng chứng là gì?"},{"id":30,"module":8,"title":"Bẫy sạch, hàng có sạch không?","lead":"Bẫy và kiểm tra mẫu hàng trả lời hai câu hỏi khác nhau.","cards":[{"title":"Bẫy giám sát","text":"Bẫy là công cụ giám sát hoạt động côn trùng trong kho, gắn với quản lý khu vực trú ẩn."},{"title":"Mẫu hàng","text":"Kiểm tra mẫu hàng tập trung vào tình trạng của hàng được khảo sát."},{"title":"Dùng cả hai","text":"Tài liệu gốc đưa kiểm tra bẫy vào quản lý kho nhưng vẫn yêu cầu kiểm tra lô hàng và lấy mẫu khi cần."}],"example":"(Minh họa) Ba tuần liền bẫy trong kho không bắt được con nào, nên tổ kho bỏ luôn việc lấy mẫu hàng. Khi xuất lô ngô nằm ở góc xa bẫy, người nhận mở bao và thấy mọt sống trong hạt.","takeaway":"Số côn trùng bắt được trên bẫy không phải kết luận trực tiếp về toàn bộ lượng côn trùng trong lô.","source":"§7.2, tr. 8","visual":"","narration":"Một chiếc máy ghi hình ở cổng cho biết ai đi qua cổng. Nó không cho biết trong từng căn phòng có gì. Bẫy côn trùng cũng giống chiếc máy ấy. Theo tài liệu, bẫy là công cụ giám sát hoạt động của côn trùng trong kho. Còn kiểm tra mẫu hàng tập trung vào tình trạng của chính lô hàng được khảo sát. Hai công cụ trả lời hai câu hỏi khác nhau. Tài liệu gốc đưa kiểm tra bẫy vào quản lý khu vực trú ẩn. Nhưng đồng thời vẫn yêu cầu kiểm tra lô hàng và lấy mẫu khi cần. Vì vậy, đừng coi số con bắt được trên bẫy là kết luận về toàn bộ côn trùng trong lô.","trainer":"Báo cáo bẫy hàng tuần của bạn đang được dùng để quyết định điều gì? Quyết định đó có vượt quá ý nghĩa của bẫy không?"},{"id":31,"module":8,"title":"Hun trùng xong, sao mọt quay lại?","lead":"Xử lý không thay thế phòng ngừa nếu nguồn tái nhiễm vẫn còn trong kho.","cards":[{"title":"Nguồn tái nhiễm","text":"Một lần xử lý không giải quyết hết nếu còn hàng nhiễm, nguyên liệu tồn dư hoặc luồng hàng chưa được kiểm soát."},{"title":"Kết hợp biện pháp","text":"Tài liệu gốc kết hợp vệ sinh, phân lô, kiểm tra và xử lý thay vì chỉ một biện pháp."},{"title":"Nguy cơ kháng thuốc","text":"FAO lưu ý dùng thuốc không hiệu quả có thể góp phần phát sinh tính kháng, trong đó có kháng phosphine."}],"example":"(Minh họa) Kho hun trùng xong, mở cửa nhập ngay lô hàng mới chưa kiểm tra và xếp cạnh góc còn bột tồn. Ít lâu sau mọt xuất hiện trở lại, kho lại hun trùng, và vòng lặp cứ thế kéo dài.","takeaway":"Bài học không đưa liều lượng hay thời gian hun trùng chung, vì chúng không dùng chung cho mọi hàng hóa và điều kiện kho.","source":"§7.3, tr. 8","visual":"","narration":"Bạn lau khô sàn nhà nhưng không khóa vòi nước đang rỉ. Một lúc sau, sàn lại ướt. Xử lý sâu mọt mà bỏ quên nguồn nhiễm cũng vậy. Theo tài liệu, một lần xử lý không giải quyết được mọi nguồn tái nhiễm. Nhất là khi trong kho còn hàng nhiễm, nguyên liệu tồn dư hoặc luồng hàng chưa được kiểm soát. Vì thế cần kết hợp vệ sinh, phân lô, kiểm tra và xử lý. Còn một lưu ý nữa. Dùng thuốc không hiệu quả có thể góp phần phát sinh tính kháng, kể cả kháng phốt phin. Tài liệu không nêu liều lượng hay thời gian hun trùng dùng chung. Những thông số ấy phụ thuộc hàng hóa và điều kiện kho.","trainer":"Sau lần xử lý gần nhất, kho đã làm gì với hàng nghi nhiễm, bột tồn dư và luồng hàng mới về?"},{"id":32,"module":8,"title":"Ba nhầm lẫn mang theo ra khỏi lớp","lead":"Mạch kiến thức đi từ khái niệm đến kiểm soát, để hiểu lý do trước khi học thao tác.","cards":[{"title":"Nhầm lẫn thứ nhất","text":"Phát hiện côn trùng không đồng nghĩa vi phạm kiểm dịch."},{"title":"Nhầm lẫn thứ hai","text":"Không nhìn thấy không đồng nghĩa không nhiễm."},{"title":"Nhầm lẫn thứ ba","text":"Xử lý côn trùng không đồng nghĩa đã hoàn tất yêu cầu kiểm dịch."}],"example":"(Minh họa) Sau khi hun trùng, kho ghi vào hồ sơ xuất hàng rằng lô “đã đạt kiểm dịch”. Cơ quan có thẩm quyền chưa hề kiểm tra lô này, và hồ sơ bị trả về vì kết luận vượt quá thẩm quyền của kho.","takeaway":"Hiểu cơ sở của quyết định trước, rồi mới học thao tác thực hiện.","source":"§9, tr. 9","visual":"Sắp xếp trình tự","interactive":{"type":"order","caption":"Sắp xếp mạch kiến thức đề xuất — theo §9, tr. 9","items":["Khái niệm kiểm dịch","Sinh học sâu mọt","Nhận diện","Hiểu dấu hiệu","Nguyên lý lấy mẫu","Nguyên lý kiểm soát"]},"narration":"Trước khi xuống núi, người leo núi nhìn lại con đường mình đã đi. Chúng ta cũng làm vậy. Khóa học đi từ khái niệm kiểm dịch đến sinh học sâu mọt và nhận diện. Sau đó là hiểu dấu hiệu, nguyên lý lấy mẫu và nguyên lý kiểm soát. Tài liệu mong bạn tránh ba nhầm lẫn. Một, phát hiện côn trùng không đồng nghĩa vi phạm kiểm dịch. Hai, không nhìn thấy không đồng nghĩa không nhiễm. Ba, xử lý côn trùng không đồng nghĩa đã hoàn tất yêu cầu kiểm dịch. Mời bạn sắp xếp lại mạch kiến thức bằng các nút lên xuống. Cảm ơn bạn đã theo dõi đến màn hình cuối cùng. Chúc bạn làm thật tốt bài đánh giá cuối khóa.","trainer":"Trong ba nhầm lẫn, nhầm lẫn nào từng gây hậu quả thực tế ở cơ sở của bạn?"}],"questions":[{"id":1,"module":1,"slide":3,"q":"Một lô hàng đạt chỉ tiêu độ ẩm. Điều nào đúng theo tài liệu?","options":["Lô hàng vẫn có thể chứa côn trùng sống","Lô hàng chắc chắn không có côn trùng","Lô hàng đã đáp ứng yêu cầu kiểm dịch"],"answer":0,"why":"Ba phạm vi quản lý liên quan nhưng không thay thế nhau; hàng đạt độ ẩm vẫn có thể chứa côn trùng sống (§1.2, tr. 1)."},{"id":2,"module":1,"slide":4,"q":"“Đối tượng kiểm dịch” trả lời câu hỏi nào?","options":["Hàng hóa nào phải chịu sự quản lý?","Sinh vật gây hại nào thuộc diện quản lý theo quy định?","Kho nào được phép chứa hàng?"],"answer":1,"why":"Vật thể thuộc diện kiểm dịch nói về hàng hóa, vật thể; đối tượng kiểm dịch nói về sinh vật gây hại thuộc diện quản lý (§1.3, tr. 2)."},{"id":3,"module":1,"slide":2,"q":"Theo tài liệu, tình trạng kiểm dịch của một sinh vật được xác định như thế nào?","options":["Chỉ dựa vào mức độ gây hại cho hàng hóa","Dựa vào số lượng cá thể tìm thấy trong kho","Còn liên quan đến sự hiện diện, phân bố và tình trạng kiểm soát chính thức tại khu vực cần bảo vệ"],"answer":2,"why":"Mức gây hại không phải tiêu chí duy nhất; còn xét sự hiện diện, phân bố và kiểm soát chính thức (§1.1, tr. 1)."},{"id":4,"module":2,"slide":6,"q":"Muốn biết sinh vật vừa phát hiện có thuộc diện quản lý hay không, cần tra nhóm căn cứ nào?","options":["Danh mục vật thể thuộc diện kiểm dịch","Danh mục đối tượng kiểm dịch và kết quả giám định","Quy chuẩn kỹ thuật về lấy mẫu"],"answer":1,"why":"Câu hỏi về sinh vật dẫn tới danh mục đối tượng kiểm dịch, kèm kết quả giám định (§2.1, tr. 2)."},{"id":5,"module":2,"slide":8,"q":"Khi nêu yêu cầu bắt buộc cho một loại hàng cụ thể, cần làm gì?","options":["Suy ra từ tên của thông tư","Chỉ cần biết thông tư còn hiệu lực","Đối chiếu điều khoản tương ứng"],"answer":2,"why":"Xác nhận ngày hiệu lực không đồng nghĩa đã xác nhận mọi điều khoản; phải đối chiếu điều khoản tương ứng (§2.2, tr. 2)."},{"id":6,"module":2,"slide":5,"q":"Tài liệu đề nghị tổ chức phần pháp luật theo cách nào?","options":["Theo chuỗi câu hỏi nghiệp vụ","Theo thứ tự số hiệu văn bản","Theo năm ban hành, từ cũ đến mới"],"answer":0,"why":"Phần pháp luật nên giảng theo câu hỏi nghiệp vụ để hiểu vai trò từng nhóm văn bản (§2.1, tr. 2)."},{"id":7,"module":3,"slide":9,"q":"Vì sao hàng nhập kho trông bình thường nhưng sau đó xuất hiện mọt?","options":["Vì mọt luôn bay từ kho bên cạnh sang","Vì hàng bị ẩm trở lại sau khi nhập","Vì ở mọt chi Sitophilus, ấu trùng phát triển bên trong hạt nên khó thấy từ ngoài"],"answer":2,"why":"Ấu trùng Sitophilus phát triển trong hạt; quan sát bên ngoài có thể không phát hiện (§3.1, tr. 3)."},{"id":8,"module":3,"slide":12,"q":"Phát biểu nào đúng về làm khô và làm mát?","options":["Khô và mát làm hạn chế, làm chậm nhưng không loại trừ hoàn toàn sâu mọt","Hàng khô thì không thể có sâu mọt","Làm mát tiêu diệt hoàn toàn côn trùng"],"answer":0,"why":"Nhiều loài vẫn sống trên ngũ cốc khô tốt; nhiệt độ thấp chỉ làm chậm phát triển (§3.3, tr. 3–4)."},{"id":9,"module":3,"slide":11,"q":"Từ “thứ cấp” trong “nhóm gây hại thứ cấp” có nghĩa là gì?","options":["Mức thiệt hại luôn thấp","Mô tả cách khai thác thức ăn: hạt đã tổn thương, phần vỡ, bột, phụ phẩm","Loài không thuộc diện kiểm dịch"],"answer":1,"why":"Thứ cấp mô tả cách khai thác thức ăn, không phải mức thiệt hại hay tình trạng pháp lý (§3.2, tr. 3; §8 câu 4, tr. 9)."},{"id":10,"module":4,"slide":15,"q":"Tìm thấy mọt có vòi trên ngô. Kết luận nào phù hợp?","options":["Chưa đủ để xác định là mọt ngô; phân biệt loài là việc của giám định","Chắc chắn là mọt ngô vì hàng là ngô","Chắc chắn là mọt ngô nếu con mọt to"],"answer":0,"why":"Hai loài Sitophilus gần giống nhau, kích thước chồng lấp, và cùng gây hại nhiều ngũ cốc (§4.2, tr. 4)."},{"id":11,"module":4,"slide":16,"q":"Điều nào đúng về mọt đục hạt nhỏ (Rhyzopertha dominica)?","options":["Chỉ phát triển trên hàng ẩm","Vẫn có thể có ý nghĩa đáng kể trên hạt có độ ẩm thấp","Thuộc nhóm gây hại thứ cấp"],"answer":1,"why":"Đây là loài sơ cấp; nhóm mọt đục hạt vẫn đáng kể trên hạt độ ẩm thấp nên độ ẩm đạt không thay kiểm tra côn trùng (§4.4, tr. 5)."},{"id":12,"module":4,"slide":14,"q":"Tên gọi “mọt gạo” cho biết điều gì về phạm vi ký chủ?","options":["Loài chỉ gây hại gạo","Loài chỉ gây hại gạo và nếp","Không đủ để suy ra; loài có thể gặp trên nhiều loại ngũ cốc khác"],"answer":2,"why":"Tên thông dụng không đủ để suy ra phạm vi ký chủ (§4.1, tr. 4)."},{"id":13,"module":5,"slide":17,"q":"Khi phát hiện mọt bột đỏ, hướng quan sát nên như thế nào?","options":["Chỉ cần làm sạch mặt ngoài bao hàng","Mở rộng sang nơi tích tụ bột, hàng vỡ và nguyên liệu tồn dư","Chỉ kiểm tra hạt còn nguyên"],"answer":1,"why":"Mọt bột đỏ là loài thứ cấp điển hình; chỉ làm sạch bề mặt bao có thể bỏ sót nguồn tồn tại (§4.3, tr. 5)."},{"id":14,"module":5,"slide":19,"q":"Thấy lỗ đục trên hạt cà phê. Cách hiểu nào đúng?","options":["Đó chắc chắn là mọt cà phê","Lỗ đục không có giá trị thông tin gì","Triệu chứng chỉ là thông tin định hướng; kết luận loài cần mẫu sinh vật và giám định"],"answer":2,"why":"Không đồng nhất mọi lỗ đục trên cà phê với Araecerus fasciculatus (§4.6, tr. 5)."},{"id":15,"module":5,"slide":18,"q":"Đặc điểm sàng lọc nào thuộc về mọt răng cưa?","options":["Thân dẹt, dài; hai bên ngực có các răng nhỏ","Thân hình trụ; đầu bị tấm ngực che khuất","Vòi dài; cánh có bốn đốm sáng"],"answer":0,"why":"Oryzaephilus surinamensis có thân dẹt, dài và răng nhỏ hai bên ngực (§4.5, tr. 5)."},{"id":16,"module":6,"slide":22,"q":"Cụm từ “nghi mọt thuộc chi Sitophilus” thuộc cấp độ kết luận nào?","options":["Kết luận chuyên môn","Phát hiện dấu hiệu bất thường","Nhận diện sơ bộ"],"answer":2,"why":"Nhận diện sơ bộ là khi hình thái phù hợp với nhóm hoặc loài nghi ngờ; kết luận chuyên môn cần giám định (§5.2, tr. 6)."},{"id":17,"module":6,"slide":23,"q":"Vì sao không nên dạy quy tắc “thấy một con mọt là phải hun trùng”?","options":["Vì cần xác định loài, loại hàng, mục đích sử dụng và yêu cầu kiểm dịch trước khi kết luận","Vì một con mọt không bao giờ đáng quan tâm","Vì hun trùng đã bị cấm hoàn toàn"],"answer":0,"why":"Không phải mọi côn trùng kho trong mọi bối cảnh đều được đánh giá theo cùng một ngưỡng (§5.3, tr. 6)."},{"id":18,"module":6,"slide":21,"q":"Khi phát hiện bột vụn trong lô hàng, cần làm gì theo tài liệu?","options":["Kết luận ngay lô bị mọt đục hạt","Xem xét đồng thời côn trùng tìm được, tình trạng hạt, vị trí; ghi hình thái, sống hay chết, mã lô, phạm vi ảnh hưởng","Bỏ qua vì bột vụn chỉ là vấn đề vệ sinh"],"answer":1,"why":"Mỗi dấu hiệu riêng lẻ chưa đủ để xác định toàn bộ tình trạng lô hàng (§5.1, tr. 6)."},{"id":19,"module":7,"slide":27,"q":"Kết quả mẫu “không phát hiện côn trùng” có nghĩa là gì?","options":["Không phát hiện trong phạm vi mẫu và phương pháp đã dùng","Toàn bộ lô hàng không nhiễm","Lô hàng đã đạt yêu cầu kiểm dịch"],"answer":0,"why":"Lấy mẫu chỉ khảo sát một phần lô; mức bảo đảm phụ thuộc thiết kế lấy mẫu và hiệu quả phát hiện (§6.3, tr. 7)."},{"id":20,"module":7,"slide":26,"q":"Mẫu kiểm tra nội bộ có vai trò gì?","options":["Thay thế kết luận kiểm dịch của cơ quan có thẩm quyền","Hỗ trợ quản lý chất lượng và phát hiện sớm","Luôn là mẫu đại diện nếu lấy ở chỗ dễ tiếp cận"],"answer":1,"why":"Kiểm tra nội bộ không tự thay thế việc lấy mẫu hoặc kết luận kiểm dịch của cơ quan có thẩm quyền (§6.2, tr. 7)."},{"id":21,"module":7,"slide":28,"q":"Vì sao thông tin đi kèm mẫu quan trọng?","options":["Chỉ để đủ thủ tục hành chính","Để mẫu trông chuyên nghiệp hơn","Vì đó là căn cứ nối kết quả giám định với đúng lô hàng"],"answer":2,"why":"Mẫu cần gắn mã lô, vị trí, ngày giờ, người thực hiện, tình trạng hàng để truy xuất (§6.4, tr. 8)."},{"id":22,"module":8,"slide":30,"q":"Số côn trùng bắt được trên bẫy cho biết điều gì?","options":["Tổng lượng côn trùng trong lô hàng","Hoạt động của côn trùng trong kho, không phải kết luận trực tiếp về toàn bộ lô","Lô hàng có đạt kiểm dịch hay không"],"answer":1,"why":"Bẫy giám sát hoạt động côn trùng; kiểm tra mẫu hàng mới tập trung vào tình trạng hàng (§7.2, tr. 8)."},{"id":23,"module":8,"slide":31,"q":"Vì sao một lần xử lý không thay thế được phòng ngừa?","options":["Vì thuốc xử lý không có tác dụng gì","Vì xử lý chỉ được làm một lần mỗi năm","Vì nguồn tái nhiễm còn đó nếu vẫn có hàng nhiễm, nguyên liệu tồn dư hoặc luồng hàng chưa kiểm soát"],"answer":2,"why":"Tài liệu kết hợp vệ sinh, phân lô, kiểm tra và xử lý thay vì chỉ một biện pháp (§7.3, tr. 8)."},{"id":24,"module":8,"slide":32,"q":"Phát biểu nào KHÔNG phải là một trong ba nhầm lẫn chính tài liệu muốn tránh?","options":["Vệ sinh loại bỏ nguồn thức ăn duy trì quần thể côn trùng","Phát hiện côn trùng đồng nghĩa vi phạm kiểm dịch","Xử lý côn trùng đồng nghĩa đã hoàn tất yêu cầu kiểm dịch"],"answer":0,"why":"Ba nhầm lẫn: phát hiện là vi phạm; không thấy là không nhiễm; xử lý là hoàn tất kiểm dịch (§9, tr. 9). Vệ sinh loại bỏ nguồn thức ăn là kiến thức đúng (§7.1, tr. 8)."}],"glossary":[{"term":"Kiểm dịch thực vật","def":"Hoạt động quản lý nhằm ngăn sinh vật gây hại thuộc diện quản lý xâm nhập và lan truyền qua cây trồng, sản phẩm thực vật và vật thể mang chúng (§1.1)."},{"term":"Vật thể thuộc diện kiểm dịch","def":"Hàng hóa hoặc vật thể phải chịu sự quản lý; có thể gồm cả bao bì, phương tiện vận chuyển, container, nơi lưu trữ (§1.3)."},{"term":"Đối tượng kiểm dịch","def":"Sinh vật gây hại thuộc diện quản lý theo quy định (§1.3)."},{"term":"Gây hại sơ cấp","def":"Nhóm có khả năng khởi đầu gây hại trên hạt nguyên, chưa bị tổn thương đáng kể (§3.2)."},{"term":"Gây hại thứ cấp","def":"Nhóm thường khai thác hạt đã tổn thương, phần vỡ, bột và phụ phẩm; không có nghĩa thiệt hại luôn thấp (§3.2)."},{"term":"Nhận diện sơ bộ","def":"Dùng đặc điểm hình thái để khoanh nhóm hoặc loài nghi ngờ tại kho; là bước sàng lọc (§4, §5.2)."},{"term":"Giám định","def":"Xác định loài bằng phương pháp chuyên môn phù hợp; cơ sở của kết luận chuyên môn (§5.2)."},{"term":"Phân tích nguy cơ dịch hại","def":"Nhóm quy định cần tra khi hỏi hàng nhập khẩu có phải phân tích nguy cơ hay không (§2.1)."},{"term":"Mẫu đại diện","def":"Mẫu phản ánh được tình trạng lô; mẫu chỉ lấy ở chỗ thuận tiện không mặc nhiên là đại diện (§6.2)."},{"term":"Mức phát hiện, hiệu quả phát hiện, mức tin cậy","def":"Các khái niệm của ISPM 31 gắn với câu hỏi muốn phát hiện mức nhiễm nào và phương pháp phát hiện được đến đâu (§6.1)."},{"term":"Kết quả âm tính","def":"Không phát hiện sinh vật trong phạm vi mẫu và phương pháp đã dùng; khác với không tồn tại (§6.3)."},{"term":"Kháng phosphine","def":"Tính kháng thuốc mà FAO lưu ý có thể phát sinh khi sử dụng thuốc không hiệu quả (§7.3)."}]}</script>
+<script>
+(function(){
+'use strict';
+var ACADEMY='PHYTOGUARD ACADEMY',AUTHOR='Đặng Thanh Bình',EMAIL='dangthanhbinh53@gmail.com',YEAR=new Date().getFullYear();
+var D=JSON.parse(document.getElementById('course-data').textContent);
+var KEY=D.id,NS=D.slides.length;
+var S={seen:{},prac:{},done:{},attempts:[],chk:{},name:'',dark:false,rate:1.2,auto:true,stopPrac:false,last:1};
+var storeOK=true,mode='learner',route={p:'home'},IS={},X=null,pracTmp={},searchQ='';
+var $=function(id){return document.getElementById(id)};
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function load(){try{var r=localStorage.getItem(KEY);if(r){var o=JSON.parse(r);for(var k in o)if(k in S)S[k]=o[k]}else localStorage.setItem(KEY,JSON.stringify(S))}catch(e){storeOK=false}}
+function save(){if(mode==='trainer')return;try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){storeOK=false}}
+function savePref(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){storeOK=false}}
+function slide(id){return D.slides[id-1]}
+function modOf(id){return Math.floor((id-1)/4)+1}
+function mSlides(m){return D.slides.filter(function(s){return s.module===m})}
+function mQs(m){return D.questions.filter(function(q){return q.module===m})}
+function seenCount(m){return mSlides(m).filter(function(s){return S.seen[s.id]}).length}
+function allDone(){return D.modules.every(function(m){return S.done[m.id]})}
+function pad(n){return(n<10?'0':'')+n}
+function fold(s){return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/đ/g,'d')}
+function today(){var d=new Date();return pad(d.getDate())+'/'+pad(d.getMonth()+1)+'/'+d.getFullYear()}
+var COPY='© '+YEAR+' '+AUTHOR+'. Bản quyền thuộc về tác giả đối với phần biên soạn tiếng Việt, ví dụ minh họa, thiết kế và phần mềm khóa học. Nội dung gốc “'+D.docName+'” © '+D.docOwner+'.';
+var LIMIT='Khóa học là bản diễn giải tiếng Việt cho đào tạo, không phải bản dịch chính thức, không phải chương trình chứng nhận. Trước khi dùng cho thiết kế, mua sắm hay viết quy trình, phải đối chiếu tài liệu gốc, quy định pháp luật hiện hành và tiêu chí của cơ sở.';
+function authorCard(){return '<div class="card sec"><h3>Tác giả biên soạn</h3><p><b>'+esc(AUTHOR)+'</b> · <a href="mailto:'+esc(EMAIL)+'">'+esc(EMAIL)+'</a></p><p class="small muted">'+esc(COPY)+'</p></div>'}
+
+/* ---------- navigation ---------- */
+function go(r,dir,keep){
+ if(!keep)T.stop();
+ var prev=route;route=r;
+ if(r.p==='slide'){S.last=r.id;if(mode==='learner'){S.seen[r.id]=1}save()}
+ else if(document.body.classList.contains('present'))setPresent(false);
+ if(dir==null)dir=(prev.p==='slide'&&r.p==='slide'&&r.id<prev.id)?'back':'fwd';
+ document.body.classList.remove('menu');
+ render(dir);
+ var m=$('main');if(document.body.classList.contains('present'))m.scrollTop=0;else window.scrollTo(0,0);
+}
+function render(dir){
+ renderSide();
+ var m=$('main'),h='';
+ if(!storeOK)h+='<div class="warnline" role="status">Trình duyệt không cho lưu tiến độ. Khóa học vẫn chạy bình thường nhưng tiến độ sẽ mất khi đóng trang.</div>';
+ if(mode==='trainer')h+='<div class="warnline" role="status">Chế độ Giảng viên: hiện ghi chú, không ghi nhận tiến độ, không mở bài đánh giá.</div>';
+ var p=route.p;
+ h+=p==='slide'?vSlide():p==='practice'?vPractice():p==='exam'?vExam():p==='result'?vResult():p==='docs'?vDocs():p==='search'?vSearch():vHome();
+ m.className=(dir?'anim '+dir:'')+(p==='slide'?' m'+modOf(route.id):'');
+ m.innerHTML=h;
+ $('ttl').textContent=D.title;
+ $('tprog').style.width=(p==='slide'?route.id/NS*100:Object.keys(S.seen).length/NS*100)+'%';
+ $('presBtn').textContent=document.body.classList.contains('present')?'Thoát trình chiếu':'Trình chiếu';
+ if(p==='slide'){T.ui();fitSoon()}
+}
+function renderSide(){
+ var h='<button class="brand" data-a="home"><i>🌾</i><span>'+esc(ACADEMY)+'</span></button><small>'+esc(D.subtitle)+'</small><nav aria-label="Các bài học">';
+ D.modules.forEach(function(m){
+  var on=(route.p==='slide'&&modOf(route.id)===m.id)||(route.p==='practice'&&route.m===m.id);
+  h+='<button class="nv m'+m.id+(S.done[m.id]?' done':'')+(on?' on':'')+'" data-a="mod" data-m="'+m.id+'"><b>'+(S.done[m.id]?'✓':m.id)+'</b><span>'+esc(m.title)+'</span></button>';
+ });
+ h+='</nav><div class="sep"></div><nav aria-label="Trang khác">'
+ +'<button class="nv'+(route.p==='exam'?' on':'')+'" data-a="exam">📝 Đánh giá cuối khóa</button>'
+ +'<button class="nv'+(route.p==='result'?' on':'')+'" data-a="result">🏅 Kết quả &amp; xác nhận</button>'
+ +'<button class="nv'+(route.p==='docs'?' on':'')+'" data-a="docs">📚 Tài liệu &amp; công cụ</button></nav>';
+ var pc=Math.round((Object.keys(S.seen).length+8*Object.keys(S.done).length)/(NS+64)*100);
+ h+='<div><small>Tiến độ: '+pc+'% · '+Object.keys(S.done).length+'/8 bài</small><div class="bar"><i style="width:'+pc+'%"></i></div></div>';
+ h+='<footer>© '+YEAR+' · '+esc(AUTHOR)+'</footer>';
+ $('side').innerHTML=h;
+}
+
+/* ---------- views ---------- */
+function heroSvg(){return '<svg viewBox="0 0 300 260" role="img" aria-label="Minh họa: hạt nông sản, kính lúp soi sâu mọt và tấm khiên kiểm dịch"><defs><linearGradient id="hg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#ffd27a"/><stop offset="1" stop-color="#f59e0b"/></linearGradient></defs>'
++'<path d="M150 18l88 30v66c0 62-40 104-88 126-48-22-88-64-88-126V48z" fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.55)" stroke-width="3"/>'
++'<g fill="url(#hg)"><ellipse cx="112" cy="150" rx="17" ry="30" transform="rotate(-18 112 150)"/><ellipse cx="150" cy="158" rx="17" ry="32"/><ellipse cx="188" cy="150" rx="17" ry="30" transform="rotate(18 188 150)"/><ellipse cx="131" cy="104" rx="14" ry="25" transform="rotate(-10 131 104)"/><ellipse cx="169" cy="104" rx="14" ry="25" transform="rotate(10 169 104)"/></g>'
++'<circle cx="150" cy="160" r="5" fill="#3a2bb0"/>'
++'<g transform="translate(196 176)"><circle r="38" fill="rgba(15,27,77,.55)" stroke="#fff" stroke-width="6"/><path d="M27 27l34 34" stroke="#fff" stroke-width="10" stroke-linecap="round"/>'
++'<g fill="#ffd27a"><ellipse cx="0" cy="4" rx="11" ry="16"/><circle cx="0" cy="-15" r="7"/><path d="M-1-21q-2-12 6-16" stroke="#ffd27a" stroke-width="3" fill="none" stroke-linecap="round"/></g>'
++'<g stroke="#ffd27a" stroke-width="3" stroke-linecap="round"><path d="M-10-2l-13-7M-11 6h-14M-10 13l-12 8M10-2l13-7M11 6h14M10 13l12 8"/></g></g></svg>'}
+function vHome(){
+ var h='<section class="hero"><div class="glow a"></div><div class="glow b"></div><div>'
+ +'<h1><span>Kiểm dịch thực vật</span><span>và sâu mọt hại kho</span><span>hiểu để làm đúng</span></h1>'
+ +'<p>'+esc(D.subtitle)+'. Khóa học tự trình chiếu có giọng đọc, luyện tập sau mỗi bài và bài đánh giá cuối khóa. Dành cho: '+esc(D.audience)+' · '+esc(D.duration)+'.</p>'
+ +'<div class="acts"><button class="btn warm" data-a="auto">▶ Bắt đầu tự trình chiếu</button><button class="btn ghost" data-a="manual">Tự xem thủ công</button></div>'
+ +'<div class="nums"><div><b>08</b><span>bài học</span></div><div><b>32</b><span>màn hình</span></div><div><b>16</b><span>câu đánh giá</span></div></div></div>'+heroSvg()+'</section>';
+ h+='<div class="grid8">';
+ D.modules.forEach(function(m){
+  h+='<button class="mcard m'+m.id+'" data-a="mod" data-m="'+m.id+'"><span class="n">'+(S.done[m.id]?'✓':pad(m.id))+'</span><h3>'+esc(m.title)+'</h3><span>'+esc(m.description)+'</span><span class="small muted">Mục tiêu: '+esc(m.objective)+'</span><span class="st">'+esc(m.duration)+' · đã xem '+seenCount(m.id)+'/4'+(S.done[m.id]?' · hoàn thành':'')+'</span></button>';
+ });
+ h+='</div><div class="two"><div class="note"><h3>Cách hoàn thành khóa học</h3><p>Xem đủ 4 màn hình của mỗi bài, trả lời đúng 2 câu luyện tập rồi bấm “Hoàn thành”. Khi đủ 8 bài, bài đánh giá 16 câu sẽ mở; cần đúng ít nhất '+needPass(16)+'/16 ('+D.passPercent+'%) để nhận xác nhận hoàn thành.</p></div>'
+ +'<div class="note"><h3>Giới hạn sử dụng</h3><p>'+esc(LIMIT)+'</p><p class="small muted">Nguồn: '+esc(D.source)+'</p></div></div>'+authorCard();
+ return h;
+}
+function needPass(n){return Math.ceil(n*D.passPercent/100)}
+function vSlide(){
+ var s=slide(route.id),m=s.module,k=(s.id-1)%4,it=s.interactive;
+ var h='<article class="slide m'+m+'" id="slide"><header class="band"><span class="kick">Bài '+m+' · '+esc(D.modules[m-1].title)+' · Màn hình '+(k+1)+'/4</span><h1>'+esc(s.title)+'</h1><p>'+esc(s.lead)+'</p><span class="big" aria-hidden="true">'+pad(s.id)+'</span><i class="shine"></i></header>';
+ h+='<div class="cards">'+s.cards.map(function(c,i){return '<section class="kc"><span class="n">'+pad(i+1)+'</span><h3>'+esc(c.title)+'</h3><p>'+esc(c.text)+'</p></section>'}).join('')+'</div>';
+ var ex='<div class="ex"><b>Ví dụ hiện trường</b><br>'+esc(s.example)+'</div>',tk='<div class="take"><b>ĐIỀU CẦN NHỚ</b><span>'+esc(s.takeaway)+'</span></div>';
+ if(it)h+='<div class="g2"><section class="inter" id="inter" aria-label="Phần tương tác">'+vInter(s)+'</section><div class="gb">'+ex+tk+'</div></div>';
+ else h+='<div class="g2 noint">'+ex+'<div class="gb">'+tk+'</div></div>';
+ h+='<p class="src">Nguồn: '+esc(D.docShort)+' · '+esc(s.source)+' · giá trị, yêu cầu là tham khảo theo tài liệu.</p>';
+ if(mode==='trainer')h+='<div class="trn"><b>Ghi chú giảng viên:</b> '+esc(s.trainer)+'</div>';
+ h+='<details class="narr"><summary>Lời thuyết minh &amp; bản đọc</summary><p>'+esc(s.narration)+'</p><ol>'+T.chunks(s.narration).map(function(c){return '<li>'+esc(c)+'</li>'}).join('')+'</ol></details>';
+ h+='<nav class="snav" aria-label="Điều hướng màn hình"><button class="btn" data-a="prev">← Trước</button><div class="dots">';
+ mSlides(m).forEach(function(x,i){h+='<button class="dot'+(x.id===s.id?' on':S.seen[x.id]?' seen':'')+'" data-a="slide" data-id="'+x.id+'" aria-label="Màn hình '+(i+1)+' của bài '+m+'"></button>'});
+ h+='</div><button class="btn pri" data-a="next">'+(k===3?'Luyện tập bài '+m+' →':'Tiếp theo →')+'</button></nav></article>';
+ h+=T.bar(s);
+ return h;
+}
+var ICON={box:'<path d="M4 9l12-6 12 6v14l-12 6-12-6z"/><path d="M4 9l12 6 12-6M16 15v14"/>',bug:'<ellipse cx="16" cy="18" rx="7" ry="9"/><circle cx="16" cy="7" r="3.5"/><path d="M9 14l-6-3M9 19H3M9 24l-5 4M23 14l6-3M23 19h6M23 24l5 4"/>',risk:'<path d="M16 3l13 24H3z"/><path d="M16 12v8M16 23.5v.5"/>',sample:'<path d="M12 3h8M13 3v9L5 26a2 2 0 002 3h18a2 2 0 002-3l-8-14V3"/><path d="M9 21h14"/>',person:'<circle cx="16" cy="10" r="6"/><path d="M4 29c1-8 6-11 12-11s11 3 12 11"/>'};
+function svgI(k){return '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+ICON[k]+'</svg>'}
+function st(s){if(!IS[s.id]){var it=s.interactive,o={sel:-1};
+ if(it.type==='order'){var n=it.items.length;o.ord=it.items.map(function(_,i){return(i*5+3)%n});o.msg=''}
+ if(it.type==='switch')o.on=[0,0,0];
+ if(it.type==='scenario'){o.step=0;o.pick=-1}
+ if(it.type==='picker'){o.f='';o.g=''}
+ if(it.type==='table'){o.hide=false}
+ IS[s.id]=o}return IS[s.id]}
+function vInter(s){
+ var it=s.interactive,o=st(s),h='<h4>'+esc(s.visual)+' · '+esc(it.caption)+'</h4>';
+ if(it.type==='flow'){
+  h+='<div class="flow">'+it.steps.map(function(x,i){return(i?'<span class="ar" aria-hidden="true">→</span>':'')+'<button class="'+(o.sel===i?'on':'')+'" data-a="i-sel" data-i="'+i+'">'+(i+1)+'. '+esc(x.t)+'</button>'}).join('')+'</div>';
+  h+='<div class="out" role="status">'+(o.sel<0?'Bấm vào từng ô để xem giải thích.':esc(it.steps[o.sel].d))+'</div>';
+ }else if(it.type==='explore5'){
+  h+='<div class="five">'+it.items.map(function(x,i){return '<button class="'+(o.sel===i?'on':'')+'" data-a="i-sel" data-i="'+i+'">'+svgI(x.icon)+'<span>'+esc(x.label)+'</span></button>'}).join('')+'</div>';
+  h+='<div class="out" role="status">'+(o.sel<0?'Bấm một nút để xem câu hỏi và nhóm căn cứ.':esc(it.items[o.sel].text))+'</div>';
+ }else if(it.type==='table'){
+  h+='<div style="overflow:auto"><table class="t'+(o.hide?' hide':'')+'"><thead><tr>'+it.head.map(function(x){return '<th>'+esc(x)+'</th>'}).join('')+'</tr></thead><tbody>'
+  +it.rows.map(function(r,i){return '<tr class="'+(o.sel===i?'hl':'')+'" data-a="i-sel" data-i="'+i+'" tabindex="0">'+r.map(function(c){return '<td>'+esc(c)+'</td>'}).join('')+'</tr>'}).join('')+'</tbody></table></div>';
+  h+='<div class="acts2"><button class="btn" data-a="i-hide">'+(o.hide?'Hiện cột cuối':'Che cột cuối để tự nhớ')+'</button><span class="small muted" role="status">'+(o.hide?'Bấm vào một dòng để mở đáp án của dòng đó.':'Bấm vào một dòng để tô sáng.')+'</span></div>';
+ }else if(it.type==='picker'){
+  h+='<div class="frm"><label>Đặc điểm nổi bật quan sát được<select data-c="i-f"><option value="">— chọn —</option>'+it.features.map(function(x,i){return '<option value="'+i+'"'+(o.f===String(i)?' selected':'')+'>'+esc(x.label)+'</option>'}).join('')+'</select></label>'
+  +'<label>Loại hàng nơi tìm thấy<select data-c="i-g"><option value="">— chọn —</option>'+it.goods.map(function(x,i){return '<option value="'+i+'"'+(o.g===String(i)?' selected':'')+'>'+esc(x)+'</option>'}).join('')+'</select></label></div>';
+  h+='<div class="out" role="status">'+(o.f===''||o.g===''?'Hãy chọn đủ cả đặc điểm và loại hàng để xem hướng sàng lọc.':'<b>'+esc(it.features[+o.f].result)+'</b><br>Hàng: '+esc(it.goods[+o.g])+' — '+esc(it.goodsNote)+'<br>'+esc(it.always))+'</div>';
+  h+='<span class="tag">TÍNH THỬ · KHÔNG PHẢI CÔNG CỤ THIẾT KẾ · không thay thế giám định</span>';
+ }else if(it.type==='switch'){
+  h+='<div class="sw">'+it.toggles.map(function(x,i){return '<label><input type="checkbox" data-c="i-sw" data-i="'+i+'"'+(o.on[i]?' checked':'')+'>'+esc(x)+'</label>'}).join('')+'</div>';
+  h+='<div class="out" role="status">'+esc(it.results[o.on.join('')])+'</div>';
+ }else if(it.type==='order'){
+  h+='<ol class="ord">'+o.ord.map(function(ix,p){return '<li><b>'+(p+1)+'</b><span>'+esc(it.items[ix])+'</span><button data-a="i-up" data-i="'+p+'" aria-label="Chuyển lên"'+(p===0?' disabled':'')+'>↑</button><button data-a="i-dn" data-i="'+p+'" aria-label="Chuyển xuống"'+(p===o.ord.length-1?' disabled':'')+'>↓</button></li>'}).join('')+'</ol>';
+  h+='<div class="acts2"><button class="btn pri" data-a="i-chk">Kiểm tra thứ tự</button><span role="status">'+o.msg+'</span></div>';
+ }else if(it.type==='scenario'){
+  if(o.step>=it.steps.length)h+='<div class="out" role="status"><span class="good">Hoàn thành tình huống.</span> Ghi đúng cấp độ kết luận, rồi ghi nhận đủ thông tin trước khi quyết định.</div><div class="acts2"><button class="btn" data-a="i-rst">Làm lại</button></div>';
+  else{var sp=it.steps[o.step];
+   h+='<div class="sc"><b>'+esc(sp.q)+'</b>'+sp.options.map(function(x,i){return '<button class="op'+(o.pick===i?(x.ok?' ok':' no'):'')+'" data-a="i-pick" data-i="'+i+'">'+esc(x.t)+'</button>'}).join('')+'</div>';
+   h+='<div class="out" role="status">'+(o.pick<0?'Chọn một phương án.':'<span class="'+(sp.options[o.pick].ok?'good':'badc')+'">'+esc(sp.options[o.pick].fb)+'</span>'+(sp.options[o.pick].ok?' <button class="btn" data-a="i-nxt">'+(o.step<it.steps.length-1?'Sang bước 2 →':'Kết thúc')+'</button>':' Hãy thử lại.'))+'</div>';}
+ }else if(it.type==='checklist'){h+=vChk(s,true)}
+ return h;
+}
+function vChk(s,btn){
+ var it=s.interactive,c=S.chk[s.id]||[],n=it.items.filter(function(_,i){return c[i]}).length;
+ return '<div class="prt"><h4 class="small">'+esc(it.caption)+'</h4><div class="ck">'+it.items.map(function(x,i){return '<label><input type="checkbox" data-c="chk" data-s="'+s.id+'" data-i="'+i+'"'+(c[i]?' checked':'')+'>'+esc(x)+'</label>'}).join('')+'</div><p class="small muted" role="status">Đã đánh dấu '+n+'/'+it.items.length+' mục. Phiếu chỉ để tự rà soát, không phải kết luận về mẫu.</p></div>'
+ +(btn?'<div class="acts2 noprint"><button class="btn" data-a="printchk">In phiếu</button></div>':'');
+}
+function vPractice(){
+ var m=route.m,qs=mQs(m).slice(0,2),ans=mode==='trainer'?(pracTmp[m]=pracTmp[m]||{}):(S.prac[m]=S.prac[m]||{});
+ var seen=seenCount(m),right=qs.filter(function(q){return ans[q.id]===q.answer}).length;
+ var h='<div class="m'+m+'"><header class="band"><span class="kick">Bài '+m+' · Luyện tập</span><h1>'+esc(D.modules[m-1].title)+'</h1><p>Hai câu hỏi ngắn. Trả lời xong sẽ thấy ngay giải thích.</p><span class="big" aria-hidden="true">?</span></header>';
+ qs.forEach(function(q,n){
+  var a=ans[q.id];
+  h+='<section class="q"><h3>Câu '+(n+1)+'. '+esc(q.q)+'</h3>'+q.options.map(function(o,i){return '<button class="opt'+(a===i?(i===q.answer?' ok':' no'):'')+'" data-a="pans" data-q="'+q.id+'" data-i="'+i+'"><b>'+'ABC'[i]+'.</b><span>'+esc(o)+'</span></button>'}).join('');
+  if(a!=null)h+='<div class="fb" role="status"><span class="'+(a===q.answer?'good':'badc')+'">'+(a===q.answer?'Đúng.':'Chưa đúng, hãy chọn lại.')+'</span> '+esc(q.why)+' <button class="btn" data-a="slide" data-id="'+q.slide+'">Ôn lại màn hình '+q.slide+'</button></div>';
+  h+='</section>';
+ });
+ var can=mode==='learner'&&seen===4&&right===2;
+ h+='<p role="status" class="small muted">Đã xem '+seen+'/4 màn hình · đúng '+right+'/2 câu.'+(mode==='trainer'?' Chế độ Giảng viên không ghi nhận hoàn thành.':'')+(S.done[m]?' Bài này đã hoàn thành.':'')+'</p>';
+ h+='<div class="acts2"><button class="btn" data-a="slide" data-id="'+(m*4)+'">← Về màn hình '+(m*4)+'</button><button class="btn pri" data-a="finish" data-m="'+m+'"'+(can?'':' disabled')+'>Hoàn thành bài '+m+'</button></div></div>';
+ return h;
+}
+function newExam(){
+ var ids=[];D.modules.forEach(function(m){var q=shuffle(mQs(m.id).map(function(x){return x.id})).slice(0,D.examPerModule);ids=ids.concat(q)});
+ X={qs:shuffle(ids),ans:{}};
+}
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
+function qById(id){return D.questions[id-1]}
+function vExam(){
+ var h='<h1>Đánh giá cuối khóa</h1>';
+ if(mode==='trainer')return h+'<div class="note">Chế độ Giảng viên không mở bài đánh giá. Chuyển sang chế độ Học viên để làm bài.</div>';
+ if(!allDone())return h+'<div class="note"><p>Bài đánh giá chỉ mở khi đã hoàn thành đủ 8 bài. Hiện đã xong '+Object.keys(S.done).length+'/8 bài.</p><p>'+D.modules.filter(function(m){return!S.done[m.id]}).map(function(m){return '<button class="btn" data-a="mod" data-m="'+m.id+'">Bài '+m.id+'</button>'}).join(' ')+'</p></div>';
+ if(!X)newExam();
+ var n=X.qs.length,done=Object.keys(X.ans).length;
+ h+='<p class="muted">'+n+' câu, mỗi bài 2 câu, thứ tự ngẫu nhiên. Cần đúng ít nhất '+needPass(n)+'/'+n+' ('+D.passPercent+'%). Điểm và giải thích chỉ hiện sau khi nộp.</p><form id="examF">';
+ X.qs.forEach(function(id,k){var q=qById(id);
+  h+='<fieldset class="q m'+q.module+'" style="border-top:0;border-right:0;border-bottom:0"><legend class="small muted">Câu '+(k+1)+'/'+n+'</legend><h3>'+esc(q.q)+'</h3>'+q.options.map(function(o,i){return '<label class="opt'+(X.ans[id]===i?' sel':'')+'"><input type="radio" name="q'+id+'" data-c="xans" data-q="'+id+'" value="'+i+'"'+(X.ans[id]===i?' checked':'')+'><span>'+esc(o)+'</span></label>'}).join('')+'</fieldset>';
+ });
+ h+='</form><div class="acts2"><button class="btn pri" id="subBtn" data-a="submit"'+(done<n?' disabled':'')+'>Nộp bài</button><span id="exSt" role="status" class="small muted">Đã trả lời '+done+'/'+n+' câu.</span></div>';
+ return h;
+}
+function vResult(){
+ var h='<h1>Kết quả &amp; xác nhận</h1>',A=S.attempts;
+ if(!A.length)return h+'<div class="note">Chưa có lượt đánh giá nào. <button class="btn" data-a="exam">Tới bài đánh giá</button></div>';
+ var a=A[A.length-1],pct=Math.round(a.score/a.total*100);
+ h+='<div class="card"><div class="score">'+a.score+'/'+a.total+'</div><p><span class="pill '+(a.pass?'ok':'no')+'">'+(a.pass?'ĐẠT':'CHƯA ĐẠT')+'</span> '+pct+'% · ngưỡng đạt '+D.passPercent+'% ('+needPass(a.total)+'/'+a.total+') · '+esc(a.date)+'</p><div class="acts2 noprint"><button class="btn pri" data-a="retake">Thi lại</button></div></div>';
+ if(a.pass){
+  h+='<section class="cert" aria-label="Xác nhận hoàn thành"><p class="small muted">'+esc(ACADEMY)+'</p><h2>XÁC NHẬN HOÀN THÀNH</h2><p>Xác nhận học viên</p><input id="cname" data-c="name" placeholder="Nhập họ tên (tùy chọn)" value="'+esc(S.name)+'" aria-label="Họ tên học viên"><p>đã hoàn thành khóa học<br><b style="font-size:20px;color:var(--ink)">'+esc(D.title)+'</b></p>'
+  +'<div class="row"><div><span class="small muted">Điểm</span><b>'+a.score+'/'+a.total+' ('+pct+'%)</b></div><div><span class="small muted">Ngày</span><b>'+esc(a.date)+'</b></div><div><span class="small muted">Mã bản ghi</span><b>'+esc(a.code)+'</b></div></div>'
+  +'<p>Tác giả biên soạn: <b>'+esc(AUTHOR)+'</b> · '+esc(EMAIL)+'</p><p class="small muted">Đây là xác nhận học tập, không phải chứng nhận của tổ chức ban hành tài liệu. '+esc(D.source)+'</p></section>'
+  +'<div class="acts2 noprint"><button class="btn pri" data-a="printcert">In / lưu PDF xác nhận</button></div>';
+ }
+ h+='<div class="card sec"><h3>Kết quả theo từng bài</h3><table class="r"><thead><tr><th>Bài</th><th>Tên bài</th><th>Đúng</th></tr></thead><tbody>';
+ D.modules.forEach(function(m){var qs=a.qs.filter(function(id){return qById(id).module===m.id}),r=qs.filter(function(id){return a.ans[id]===qById(id).answer}).length;
+  h+='<tr><td>'+m.id+'</td><td>'+esc(m.title)+'</td><td class="'+(r===qs.length?'good':'badc')+'">'+r+'/'+qs.length+'</td></tr>'});
+ h+='</tbody></table></div><details class="card sec"><summary><b>Xem lại đáp án lượt gần nhất</b></summary>';
+ a.qs.forEach(function(id,k){var q=qById(id),u=a.ans[id];
+  h+='<div class="q m'+q.module+'"><h3>'+(k+1)+'. '+esc(q.q)+'</h3>'+q.options.map(function(o,i){return '<div class="opt'+(i===q.answer?' ok':u===i?' no':'')+'"><b>'+'ABC'[i]+'.</b><span>'+esc(o)+(u===i?' — bạn chọn':'')+'</span></div>'}).join('')+'<div class="fb">'+esc(q.why)+' <button class="btn" data-a="slide" data-id="'+q.slide+'">Màn hình '+q.slide+'</button></div></div>'});
+ h+='</details><div class="card sec"><h3>Lịch sử các lượt</h3><table class="r"><thead><tr><th>Lượt</th><th>Ngày</th><th>Điểm</th><th>Kết quả</th><th>Mã bản ghi</th></tr></thead><tbody>'
+ +A.map(function(x,i){return '<tr><td>'+(i+1)+'</td><td>'+esc(x.date)+'</td><td>'+x.score+'/'+x.total+'</td><td>'+(x.pass?'Đạt':'Chưa đạt')+'</td><td>'+esc(x.code)+'</td></tr>'}).join('')+'</tbody></table></div>';
+ return h;
+}
+function vDocs(){
+ var h='<h1>Tài liệu &amp; công cụ</h1><div class="note"><h3>Nguồn chính</h3><p>'+esc(D.source)+'</p><p>'+esc(LIMIT)+'</p><p class="small muted">Tài liệu nguồn tự dẫn các nguồn: bài giảng gốc năm 2026, ISPM 20, ISPM 31 và Bảng thuật ngữ chú giải của IPPC, tài liệu của FAO về côn trùng hại kho, Thông tư 07/2026/TT-BNNMT. Khóa học không nhúng nguyên văn hay hình ảnh của các tài liệu này.</p></div>';
+ h+='<div class="card sec"><h3>Chỉ mục nguồn của 32 màn hình</h3><div style="overflow:auto"><table class="r"><thead><tr><th>#</th><th>Màn hình</th><th>Nguồn trong tài liệu</th><th>Tương tác</th></tr></thead><tbody>'
+ +D.slides.map(function(s){return '<tr><td>'+pad(s.id)+'</td><td><a href="#" data-a="slide" data-id="'+s.id+'">'+esc(s.title)+'</a></td><td>'+esc(s.source)+'</td><td>'+esc(s.visual||'—')+'</td></tr>'}).join('')+'</tbody></table></div></div>';
+ h+='<div class="card sec"><h3>Bảng thuật ngữ</h3><dl class="gl">'+D.glossary.map(function(g){return '<dt>'+esc(g.term)+'</dt><dd>'+esc(g.def)+'</dd>'}).join('')+'</dl></div>';
+ h+='<div class="card sec m7"><h3>Checklist in được</h3>'+vChk(slide(28),true)+'</div>';
+ h+='<div class="card sec"><h3>Dữ liệu học tập</h3><p class="small muted">Tiến độ chỉ lưu trong trình duyệt này (localStorage), không gửi đi đâu.</p><div class="acts2"><button class="btn" data-a="xjson">Xuất JSON</button><button class="btn" data-a="xcsv">Xuất CSV</button><button class="btn" data-a="reset">Xóa tiến độ</button></div><p id="docSt" role="status" class="small"></p></div>'+authorCard();
+ return h;
+}
+function vSearch(){
+ var q=fold(searchQ.trim()),h='<h1>Kết quả tìm: “'+esc(searchQ)+'”</h1><div class="res">',n=0;
+ if(q.length>=2)D.slides.forEach(function(s){
+  var hay=fold([s.title,s.lead,s.example,s.takeaway].concat(s.cards.map(function(c){return c.title+' '+c.text})).join(' '));
+  if(hay.indexOf(q)>=0){n++;h+='<a href="#" class="m'+s.module+'" data-a="slide" data-id="'+s.id+'"><b>'+pad(s.id)+' · '+esc(s.title)+'</b><br><span class="small muted">Bài '+s.module+' · '+esc(s.lead)+'</span></a>'}
+ });
+ return h+'</div><p role="status" class="muted">'+(q.length<2?'Nhập ít nhất 2 ký tự.':n?n+' màn hình phù hợp.':'Không tìm thấy màn hình phù hợp.')+'</p>';
+}
+
+/* ---------- TTS ---------- */
+var T=(function(){
+ var au=new Audio(),tok=0,ch=[],i=0,state='idle',sid=0,muted=false,err='',timer=0,CL=['tw-ob','gtx'];
+ var MAP=[[/IPPC/g,'ai pi pi xi'],[/ISPM/g,'ai ét pi em'],[/FAO/g,'phao'],[/QCVN/g,'quy chuẩn Việt Nam'],[/CIP/g,'xi ai pi'],[/QA/g,'kiu ây'],[/QC/g,'kiu xi'],[/phosphine/gi,'phốt phin'],[/axit/gi,'a xít'],[/container/gi,'công ten nơ'],[/checklist/gi,'bảng kiểm'],[/pallet/gi,'pa lét'],[/Sitophilus/gi,'xi tô phi lút'],[/°C/g,' độ xê'],[/%/g,' phần trăm'],[/[“”"()—–→×\/&]/g,' ']];
+ function norm(t){MAP.forEach(function(m){t=t.replace(m[0],m[1])});return t.replace(/\s+/g,' ').trim()}
+ function chunks(t){
+  var sen=norm(t).match(/[^.!?…]+[.!?…]*/g)||[],out=[],cur='';
+  sen.forEach(function(s){s=s.trim();if(!s)return;
+   while(s.length>170){var c=s.lastIndexOf(',',170);if(c<60)c=s.lastIndexOf(' ',170);if(c<1)c=170;if(cur){out.push(cur);cur=''}out.push(s.slice(0,c+1).trim());s=s.slice(c+1).trim()}
+   if(cur&&(cur+' '+s).length>170){out.push(cur);cur=s}else cur=cur?cur+' '+s:s});
+  if(cur)out.push(cur);return out;
+ }
+ function url(t,c){return 'https://translate.google.com/translate_tts?ie=UTF-8&tl=vi&total=1&idx=0&client='+c+'&q='+encodeURIComponent(t)+'&textlen='+t.length}
+ function fail(){state='error';err='Không phát được giọng đọc. Kiểm tra Internet rồi bấm Đọc lại';showBars(true);ui()}
+ function play(my,ci){
+  if(my!==tok)return;
+  if(i>=ch.length){finished(my);return}
+  var handled=false;
+  function bad(e){if(handled||my!==tok)return;if(e&&e.name==='AbortError')return;handled=true;if(ci<CL.length-1)play(my,ci+1);else fail()}
+  au.onended=function(){if(my!==tok)return;i++;ui();play(my,0)};
+  au.onerror=function(){bad()};
+  au.src=url(ch[i],CL[ci]);au.muted=muted;au.defaultPlaybackRate=S.rate;au.playbackRate=S.rate;
+  state='playing';err='';ui();
+  var p=au.play();if(p&&p.catch)p.catch(bad);
+ }
+ function finished(my){
+  state='done';ui();
+  if(!S.auto||route.p!=='slide')return;
+  timer=setTimeout(function(){
+   if(my!==tok||route.p!=='slide')return;
+   var id=route.id;
+   if(id%4===0&&S.stopPrac){go({p:'practice',m:modOf(id)});return}
+   if(id>=NS){state='idle';err='Đã đọc hết 32 màn hình.';ui();showBars(true);return}
+   go({p:'slide',id:id+1},'fwd',true);speak();
+  },900);
+ }
+ function speak(from){
+  tok++;clearTimeout(timer);try{au.pause()}catch(e){}
+  if(route.p!=='slide')return;
+  sid=route.id;ch=chunks(slide(sid).narration);i=from||0;play(tok,0);
+ }
+ function stop(){tok++;clearTimeout(timer);try{au.pause();au.removeAttribute('src')}catch(e){}state='idle';err='';i=0;ui()}
+ function toggle(){
+  if(state==='playing'){au.pause();state='paused';ui()}
+  else if(state==='paused'&&sid===route.id){var p=au.play();state='playing';ui();if(p&&p.catch)p.catch(function(){fail()})}
+  else speak();
+ }
+ function setRate(r){S.rate=r;au.playbackRate=r;au.defaultPlaybackRate=r;savePref()}
+ function mute(){muted=!muted;au.muted=muted;ui()}
+ au.addEventListener('playing',function(){au.playbackRate=S.rate});
+ au.addEventListener('timeupdate',function(){var e=$('ttsP');if(e&&ch.length&&sid===route.id){var f=au.duration?au.currentTime/au.duration:0;e.style.width=Math.min(100,(i+f)/ch.length*100)+'%'}});
+ function ui(){
+  var b=$('ttsPlay');if(!b)return;
+  var here=sid===route.id;
+  b.textContent=state==='playing'&&here?'Ⅱ Tạm dừng':state==='paused'&&here?'▶ Tiếp tục':'▶ Phát';
+  $('ttsMute').textContent=muted?'Bật tiếng':'Tắt tiếng';
+  var s=$('ttsS'),n=here&&ch.length?ch.length:chunks(slide(route.id).narration).length;
+  s.className='stt'+(state==='error'?' err':'');
+  s.textContent=err||('màn hình '+route.id+' · đoạn '+(here&&state!=='idle'?Math.min(i+1,n):0)+'/'+n+(state==='done'&&here?' · đã đọc xong':''));
+  if(state==='idle'||!here)$('ttsP').style.width='0';
+ }
+ function bar(s){
+  return '<div class="tts m'+s.module+'" id="tts" role="group" aria-label="Thanh giọng đọc"><button class="btn" data-a="prev" aria-label="Màn hình trước">←</button><button class="btn pri" id="ttsPlay" data-a="t-play">▶ Phát</button><button class="btn" data-a="next" aria-label="Màn hình sau">→</button>'
+  +'<button class="btn" data-a="t-again">Đọc lại</button><button class="btn" data-a="t-stop">Dừng</button><button class="btn" id="ttsMute" data-a="t-mute">Tắt tiếng</button>'
+  +'<label>Tốc độ <select data-c="rate" aria-label="Tốc độ đọc">'+[0.9,1,1.2,1.4].map(function(r){return '<option value="'+r+'"'+(S.rate===r?' selected':'')+'>'+String(r).replace('.',',')+'×</option>'}).join('')+'</select></label>'
+  +'<label><input type="checkbox" data-c="auto"'+(S.auto?' checked':'')+'>Tự chuyển</label><label><input type="checkbox" data-c="stopPrac"'+(S.stopPrac?' checked':'')+'>Dừng ở luyện tập</label>'
+  +'<span class="stt" id="ttsS" role="status"></span><span class="disc">Google Translate TTS · Cần Internet. Lời thuyết minh được gửi tới Google; không gửi thông tin học viên.</span><i class="tp" id="ttsP"></i></div>';
+ }
+ return{speak:speak,stop:stop,toggle:toggle,setRate:setRate,mute:mute,ui:ui,bar:bar,chunks:chunks,state:function(){return state}};
+})();
+
+/* ---------- present mode ---------- */
+var barT=0,overBar=false,wentFS=false;
+function showBars(hold){
+ if(!document.body.classList.contains('present'))return;
+ document.body.classList.add('bars');clearTimeout(barT);
+ if(!hold)barT=setTimeout(function(){if(!overBar&&T.state()!=='error')document.body.classList.remove('bars')},2600);
+}
+function setPresent(on){
+ var b=document.body;if(on===b.classList.contains('present'))return;
+ b.classList.toggle('present',on);b.classList.remove('bars');
+ if(on){wentFS=false;try{var p=document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen();if(p&&p.then)p.then(function(){wentFS=true},function(){})}catch(e){}showBars()}
+ else{T.stop();try{if(document.fullscreenElement)document.exitFullscreen()}catch(e){}var s=$('slide');if(s)s.style.zoom=''}
+ $('presBtn').textContent=on?'Thoát trình chiếu':'Trình chiếu';fitSoon();
+}
+function fit(){
+ var s=$('slide');if(!s)return;
+ if(!document.body.classList.contains('present')){s.style.zoom='';return}
+ var avail=window.innerHeight-28,z=1;s.style.zoom=1;
+ for(var k=0;k<10;k++){var h=s.getBoundingClientRect().height;if(!h)break;
+  var nz=Math.max(.5,Math.min(1.7,z*Math.pow(avail/h,.6)));
+  if(Math.abs(nz-z)<.003)break;z=nz;s.style.zoom=z}
+}
+function fitSoon(){fit();requestAnimationFrame(fit)}
+window.addEventListener('resize',fitSoon);
+document.addEventListener('animationend',function(e){if(e.target.id==='slide'||e.target.classList.contains('take'))fit()});
+document.addEventListener('fullscreenchange',function(){if(!document.fullscreenElement&&wentFS&&document.body.classList.contains('present'))setPresent(false);fitSoon()});
+document.addEventListener('mousemove',function(e){if(e.clientY<70||e.clientY>window.innerHeight-110)showBars()});
+document.addEventListener('touchstart',function(){showBars()},{passive:true});
+document.addEventListener('mouseover',function(e){var was=overBar;overBar=!!(e.target.closest&&e.target.closest('.top,.tts'));if(overBar)showBars(true);else if(was)showBars()});
+
+/* ---------- actions ---------- */
+function nextFrom(){var id=route.id;if(id%4===0)go({p:'practice',m:modOf(id)});else go({p:'slide',id:id+1},'fwd')}
+function prevFrom(){var id=route.id;if(id>1)go({p:'slide',id:id-1},'back');else go({p:'home'},'back')}
+function reInter(){var s=slide(route.id),e=$('inter');if(e){e.innerHTML=vInter(s);fit()}}
+function download(name,text,type){try{var b=new Blob([text],{type:type}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(a.href)},2000);return true}catch(e){return false}}
+function csv(){
+ var q=function(v){return '"'+String(v).replace(/"/g,'""')+'"'},L=[['loai','muc','gia_tri_1','gia_tri_2','gia_tri_3','gia_tri_4'].join(',')];
+ D.modules.forEach(function(m){L.push(['bai',m.id,q(m.title),seenCount(m.id)+'/4',S.done[m.id]?'hoan_thanh':'chua',''].join(','))});
+ S.attempts.forEach(function(a,i){L.push(['luot_danh_gia',i+1,q(a.date),a.score+'/'+a.total,a.pass?'dat':'chua_dat',q(a.code)].join(','))});
+ return '﻿'+L.join('\r\n');
+}
+function act(a,el,ev){
+ var s,o,i=+el.getAttribute('data-i');
+ switch(a){
+ case 'menu':document.body.classList.toggle('menu');break;
+ case 'home':go({p:'home'});break;
+ case 'mod':var m=+el.getAttribute('data-m');var f=mSlides(m).filter(function(x){return!S.seen[x.id]})[0];go({p:'slide',id:f&&!S.done[m]?f.id:(m-1)*4+1},'fwd');break;
+ case 'slide':ev.preventDefault();go({p:'slide',id:+el.getAttribute('data-id')});break;
+ case 'exam':go({p:'exam'});break;case 'result':go({p:'result'});break;case 'docs':go({p:'docs'});break;
+ case 'dark':S.dark=!S.dark;document.body.classList.toggle('dark',S.dark);savePref();break;
+ case 'present':if(document.body.classList.contains('present'))setPresent(false);else{if(route.p!=='slide')go({p:'slide',id:S.last||1},'fwd');setPresent(true)}break;
+ case 'auto':go({p:'slide',id:S.last&&S.last<NS?S.last:1},'fwd');setPresent(true);S.auto=true;T.ui();T.speak();break;
+ case 'manual':go({p:'slide',id:1},'fwd');break;
+ case 'next':nextFrom();break;case 'prev':prevFrom();break;
+ case 't-play':T.toggle();break;case 't-again':T.speak();break;case 't-stop':T.stop();break;case 't-mute':T.mute();break;
+ case 'i-sel':st(slide(route.id)).sel=i;reInter();break;
+ case 'i-hide':o=st(slide(route.id));o.hide=!o.hide;o.sel=-1;reInter();break;
+ case 'i-up':case 'i-dn':o=st(slide(route.id));var j=a==='i-up'?i-1:i+1;if(j>=0&&j<o.ord.length){var t=o.ord[i];o.ord[i]=o.ord[j];o.ord[j]=t;o.msg=''}reInter();break;
+ case 'i-chk':o=st(slide(route.id));var okN=o.ord.filter(function(v,p){return v===p}).length;o.msg=okN===o.ord.length?'<span class="good">Đúng thứ tự theo §9.</span>':'<span class="badc">Mới đúng vị trí '+okN+'/'+o.ord.length+' mục. Hãy thử lại.</span>';reInter();break;
+ case 'i-pick':st(slide(route.id)).pick=i;reInter();break;
+ case 'i-nxt':o=st(slide(route.id));o.step++;o.pick=-1;reInter();break;
+ case 'i-rst':o=st(slide(route.id));o.step=0;o.pick=-1;reInter();break;
+ case 'printchk':document.body.setAttribute('data-print','chk');window.print();break;
+ case 'printcert':document.body.setAttribute('data-print','cert');window.print();break;
+ case 'pans':var qid=+el.getAttribute('data-q'),mm=route.m;(mode==='trainer'?pracTmp[mm]:S.prac[mm])[qid]=i;save();render();break;
+ case 'finish':var fm=+el.getAttribute('data-m');S.done[fm]=1;save();if(fm<8)go({p:'slide',id:fm*4+1},'fwd');else go({p:'exam'});break;
+ case 'submit':
+  if(!X||Object.keys(X.ans).length<X.qs.length)break;
+  var sc=X.qs.filter(function(id){return X.ans[id]===qById(id).answer}).length,d=new Date();
+  S.attempts.push({date:today(),score:sc,total:X.qs.length,pass:sc>=needPass(X.qs.length),qs:X.qs,ans:X.ans,code:'PG-'+d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+'-'+Math.random().toString(36).slice(2,8).toUpperCase()});
+  X=null;save();go({p:'result'});break;
+ case 'retake':X=null;go({p:'exam'});break;
+ case 'xjson':$('docSt').textContent=download(KEY+'-tien-do.json',JSON.stringify({course:KEY,version:D.version,exported:new Date().toISOString(),progress:S},null,2),'application/json')?'Đã xuất tệp JSON.':'Không xuất được tệp.';break;
+ case 'xcsv':$('docSt').textContent=download(KEY+'-tien-do.csv',csv(),'text/csv;charset=utf-8')?'Đã xuất tệp CSV.':'Không xuất được tệp.';break;
+ case 'reset':if(window.confirm('Xóa toàn bộ tiến độ, kết quả luyện tập và lịch sử đánh giá trên trình duyệt này?')){S.seen={};S.prac={};S.done={};S.attempts=[];S.chk={};S.name='';S.last=1;X=null;IS={};savePref();go({p:'home'})}break;
+ }
+}
+document.addEventListener('click',function(e){var el=e.target.closest&&e.target.closest('[data-a]');if(el&&!el.disabled)act(el.getAttribute('data-a'),el,e)});
+document.addEventListener('change',function(e){
+ var el=e.target,c=el.getAttribute&&el.getAttribute('data-c');if(!c)return;var o;
+ if(c==='rate')T.setRate(+el.value);
+ else if(c==='auto'){S.auto=el.checked;savePref()}
+ else if(c==='stopPrac'){S.stopPrac=el.checked;savePref()}
+ else if(c==='i-f'){st(slide(route.id)).f=el.value;reInter()}
+ else if(c==='i-g'){st(slide(route.id)).g=el.value;reInter()}
+ else if(c==='i-sw'){st(slide(route.id)).on[+el.getAttribute('data-i')]=el.checked?1:0;reInter()}
+ else if(c==='chk'){var sid=el.getAttribute('data-s');o=S.chk[sid]=S.chk[sid]||[];o[+el.getAttribute('data-i')]=el.checked?1:0;savePref();if(route.p==='slide')reInter();else render()}
+ else if(c==='xans'){X.ans[+el.getAttribute('data-q')]=+el.value;var n=Object.keys(X.ans).length;$('subBtn').disabled=n<X.qs.length;$('exSt').textContent='Đã trả lời '+n+'/'+X.qs.length+' câu.';
+  [].forEach.call(el.closest('fieldset').querySelectorAll('.opt'),function(l){l.classList.toggle('sel',l.contains(el))})}
+});
+document.addEventListener('input',function(e){
+ if(e.target.id==='search'){searchQ=e.target.value;if(searchQ.trim())go({p:'search'},'');else if(route.p==='search')go({p:'home'},'')}
+ else if(e.target.id==='cname'){S.name=e.target.value;savePref()}
+});
+$('mode').addEventListener('change',function(e){mode=e.target.value;T.stop();render()});
+document.addEventListener('keydown',function(e){
+ var tg=e.target.tagName,form=/^(INPUT|SELECT|TEXTAREA|BUTTON|SUMMARY|A)$/.test(tg),pres=document.body.classList.contains('present');
+ if(e.key==='Enter'&&e.target.matches&&e.target.matches('tr[data-a]')){act(e.target.getAttribute('data-a'),e.target,e);return}
+ if(e.key==='Escape'){if(pres)setPresent(false);else T.stop();document.body.classList.remove('menu');return}
+ if(route.p!=='slide'||/^(INPUT|SELECT|TEXTAREA)$/.test(tg)||e.ctrlKey||e.altKey||e.metaKey)return;
+ if(e.key==='ArrowRight'){e.preventDefault();nextFrom()}
+ else if(e.key==='ArrowLeft'){e.preventDefault();prevFrom()}
+ else if((e.key===' '||e.code==='Space')&&pres&&!form){e.preventDefault();T.toggle()}
+});
+window.addEventListener('afterprint',function(){document.body.removeAttribute('data-print')});
+
+load();
+document.body.classList.toggle('dark',!!S.dark);
+render('fwd');
+})();
+</script>
+</body>
+</html>
